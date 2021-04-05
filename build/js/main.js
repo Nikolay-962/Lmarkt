@@ -24,7 +24,6 @@ const catalogSoci = document.querySelector('.catalog__soci');
 
 //Фиксирование страници при выпадающих окнах
 
-
 //Список городов
 sitiBtn.addEventListener('click', () => {
   let openSiti = document.querySelector('.region__sities');
@@ -45,7 +44,6 @@ for (let i = 0; i < tounLink.length; i++) {
 
   });
 }
-
 // Каталог товаров
 catalogBtn.addEventListener('click', () => {
   openCatalog.classList.toggle('active');
@@ -146,7 +144,8 @@ openProfile.addEventListener('click', () => {
 
 });
 
-clousProfile.addEventListener('click', () => {
+clousProfile.addEventListener('click', function (e) {
+  e.preventDefault();
   profileOpen.classList.remove('profile-form__wrap--open');
   darkBackground.classList.remove('active');
 });
