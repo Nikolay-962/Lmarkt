@@ -1,0 +1,68 @@
+{% set cardList = [
+{src:'img/product1.png',
+text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
+{src:'img/product2.png',
+text:'1Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽'},
+{src:'img/product3.png',
+text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+{ src:'img/product4.png',
+text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
+{src:'img/product1.png',
+text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
+{src:'img/product2.png',
+text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+{src:'img/product3.png',
+text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+{ src:'img/product4.png',
+text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'}
+] %}
+<div class="pop-goods">
+  <h2 class="pop-goods__title s-title">
+    Популярные товары
+  </h2>
+  <div class="pop-goods__good-slider good-slider">
+    <div class="good-slider__list">
+      {% for cardItem in cardList %}
+      <div class="good-slider__item p-card">
+        <div class="p-card__wrap">
+          <div class="p-card__select select">
+            <button class="select__btn">
+              <svg class="select__icon select__icon--favorites">
+                <use href="#favorites"></use>
+              </svg>
+            </button>
+            <button class="select__btn">
+              <svg class="select__icon select__icon--comparison">
+                <use href="#comparison"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="p-card__visual">
+            <div class="p-card__cover">
+              <img src="{{ cardItem.src }}" alt="{{ alt }}" class="p-card__img">
+            </div>
+          </div>
+          <div class="p-card__description">
+            <a href="#" class="p-card__link">
+              <strong>{{ cardItem.text }}</strong>
+            </a>
+          </div>
+          <div class="p-card__price p-price">
+            <div class="p-price__wrap">
+              <div class="p-price__sum">
+                {{ cardItem.prise }}<br>
+                <span class="p-price__old-sum">{{ cardItem.oldprise }}</span>
+              </div>
+              <button class="p-price__basket">
+                <svg class="s-icon p-price__icon">
+                  <use href="#basket"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

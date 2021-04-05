@@ -1,0 +1,403 @@
+<header class="header">
+  <div class="header__wrap">
+    <div class="header__h-top h-top">
+      <div class="h-top__wrap">
+        <div class="h-top__region region">
+          <button type="button" class="region__button" name="town" id="town">
+            Москва
+          </button>
+          <div class="region__sities siti">
+            <div class="siti__wrap">
+              <div class="siti__main">
+                <span class="siti__m-main">
+                  Нижний Новгород
+                </span>
+                <a href="#" class="siti__link">
+                  смотреть пункты выдачи и постоматы
+                </a>
+              </div>
+              <div class="siti__search">
+                <div class="search">
+                  <input type="text" class="search__field" placeholder="Введите название вашего">
+                  <button class="search__btn">
+                    <img src="img/search-icon.svg" alt="лупа" class="search__img">
+                  </button>
+                </div>
+              </div>
+              <div class="siti__scrol scrol">
+                <div class="scrol__wrap">
+                  {% set cityList = [{title: 'Москва', isStrong: true}, {title: 'Санк-Петербург', isStrong: true},
+                  {title: 'Астрахань'}, {title: 'Барнаул'}, {title: 'Владивосток'}, {title: 'Волгоград'}, {title:
+                  'Воронеж'},
+                  {title:'Eкатеринбург'}, {title: 'Ижевск'}, {title: 'Иркутск'}, {title:
+                  'Казань'}, {title: 'Кемерово'}, {title: 'Киров'}, {title: 'Краснодар'}, {title: 'Красноярск'}, {title:
+                  'Липецк'}, {title: 'Махачкала'}, {title: 'Набережные Челны'}, {title: 'Набережные Челны'}, {title:
+                  'Новокузнецк'}, {title: 'Новосибирск'}, {title: 'Омск'}, {title: 'Оренбург'}, {title: 'Пенза'},
+                  {title: 'Пермь'}, {title: 'Ростов-на-Дону'}, {title: 'Рязань'}, {title: 'Пенза'}, {title: 'Пермь'},
+                  {title: 'Ростов-на-Дону'}, {title: 'Рязань'}, {title: 'Самара'}, {title: 'Саратов'}, {title:
+                  'Тольятти'}, {title: 'Тула'}, {title: 'Тверь'}]%}
+                  <ul class="scrol__list">
+                    {% for cityItem in cityList %}
+                    <li class="scrol__item">
+                      <button class="scrol__btn  {% if cityItem.isStrong %} scrol__btn--strong {% endif %}">
+                        {{cityItem.title}}
+                      </button>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-top__navigation">
+          <nav class="nav">
+            {% set navList = [
+            {title: 'Пункты выдачи и постаматы'},
+            {title: 'О маркетплейсе'},
+            {title: 'Где мойзаказ?'},
+            {title: 'Контакты'}
+            ]%}
+            <ul class="nav__list">
+              {% for navItem in navList %}
+              <li class="nav__item">
+                <a href="#" class="nav__link">{{navItem.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="h-top__soci">
+          <div class="soci">
+            {% set sociList = [
+            {href: '#', id: '#vk', icon: 'soci__icon--vk'},
+            {href: '#', id: '#fb', icon: 'soci__icon--fb'},
+            {href: '#', id: '#in', icon: 'soci__icon--in'},
+            {href: '#', id: '#tw', icon: 'soci__icon--tw'},
+            ] %}
+            <ul class="soci__list">
+              {% for sociItem in sociList %}
+              <li class="soci__item">
+                <a href="{{ sociItem.href }}" class="soci__link">
+                  <svg class="soci__icon {{ sociItem.icon }}">
+                    <use href="{{ sociItem.id }}"></use>
+                  </svg>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__h-main h-main">
+      <div class="h-main__wrap">
+        <div class="h-main__logo logo">
+          <a href="#" class="logo__link">
+            <img src="img/logo.svg" alt="logo" class="logo__img">
+          </a>
+        </div>
+        <div class="h-main__catalog-btn catalog-btn">
+          <button type="button" class="catalog-btn__button" name="Каталог" id="catalog">
+            Каталог
+          </button>
+        </div>
+        <div class="h-main__search">
+          <div class="search">
+            <input type="text" class="search__field" placeholder="Поиск по сайту">
+            <button class="search__btn" name="Поиск">
+              <img src="img/search-icon.svg" alt="лупа" class="search__img">
+            </button>
+          </div>
+        </div>
+        <div class="h-main__phone phone">
+          <a href="#" class="phone__link">8 800 611 00 97</a>
+        </div>
+        <div class="h-main__servis">
+          <div class="servis">
+            <ul class="servis__list">
+              <li class="servis__item servis__item--menu">
+                <button type="button" class="servis__btn servis__btn--menu" name="Меню">
+                  <svg class="s-icon servis__icon servis__icon--menu">
+                    <use href="#menu"></use>
+                  </svg>
+                  Меню
+                </button>
+              </li>
+              <li class="servis__item servis__item--phone">
+                <a href="#" class="servis__link" name="Позвонить нам">
+                  <svg class="s-icon servis__icon servis__icon--phone">
+                    <use href="#phone"></use>
+                  </svg>
+                  Позвонить нам
+                </a>
+              </li>
+              <li class="servis__item servis__item--favorites">
+                <a href="#" class="servis__link" name="Избранное">
+                  <svg class="s-icon servis__icon servis__icon--favorites">
+                    <use href="#favorites"></use>
+                  </svg>
+                  Избранное
+                </a>
+              </li>
+              <li class="servis__item servis__item--comparison">
+                <a href="#" class="servis__link" name="Сравнение">
+                  <svg class="s-icon servis__icon servis__icon--comparison">
+                    <use href="#comparison"></use>
+                  </svg>
+                  Сравнение
+                </a>
+              </li>
+              <li class="servis__item servis__item--profile">
+                <a href="#" class="servis__link" name="Профиль" id="profile">
+                  <img src="img/profile-icon.svg" class="s-icon servis__icon servis__icon--profile" alt="">
+                  <!--<svg class="s-icon servis__icon servis__icon--profile">
+                    <use href="#profile"></use>
+                  </svg>-->
+                  Профиль
+                </a>
+              </li>
+              <li class="servis__item servis__item--basket">
+                <a href="#" class="servis__link" name="Корзина" id="purchase">
+                  <div class="servis__amount" id="amount">2</div>
+                  <svg class="s-icon servis__icon servis__icon--basket">
+                    <use href="#basket"></use>
+                  </svg>
+                  Корзина
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__catalog catalog">
+      <div class="catalog__wrap" id="width">
+        <div class="catalog__title">
+          <strong class="catalog__strong">Каталог</strong>
+        </div>
+        <ul class="catalog__list">
+          {% set catalogList = [
+          {href: '#', text: 'Клавишные инструменты', isNext: true},
+          {href: '#', text: 'Ударные инструменты', isNext: true},
+          {href: '#', text: 'Микрофоны и радиосистемы', isOpen: true},
+          {href: '#', text: 'DJ оборудование'},
+          {href: '#', text: 'Студийное оборудование', isNext: true},
+          {href: '#', text: 'Звуковое оборудование', isNext: true},
+          {href: '#', text: 'Световое оборудование'},
+          {href: '#', text: 'Наушники и гарнитуры'},
+          {href: '#', text: 'Коммутация', isNext: true},
+          {href: '#', text: 'Духовые инструменты', isNext: true},
+          {href: '#', text: 'Губные гармошки и мелодики', isNext: true},
+          {href: '#', text: 'Смычковые и щипковые'},
+          {href: '#', text: 'Аккордеоны и баяны'},
+          ] %}
+          <li class="catalog__item catalog__item--back">
+            <a href="#" class="catalog__link icon icon--next" id="guitar">
+              Гитары
+            </a>
+            <ul class="catalog__sub-list">
+              {% set catalogSubList = [
+              {href: '#', text: 'Акустические гитары'},
+              {href: '#', text: 'Акустические бас-гитары', isNext: true},
+              {href: '#', text: 'Электрогитары'},
+              {href: '#', text: 'Бас-гитары', isNext: true},
+              {href: '#', text: 'Укулеле', isNext: true},
+              {href: '#', text: 'Народные инструменты', isNext: true},
+              {href: '#', text: 'Наборы и комплекты'},
+              {href: '#', text: 'Гитарное усиление'},
+              {href: '#', text: 'Процессоры и педали эффектов', isNext: true},
+              {href: '#', text: 'Тюнеры и метрономы'},
+              {href: '#', text: 'Струны'},
+              {href: '#', text: 'Гитарные аксессуары'},
+              ] %}
+              <li class="catalog__sub-item catalog__sub-item--back catalog__sub-item--title">
+                <strong class="icon icon--prev">Вернуться в Каталог</strong>
+              </li>
+              <li class="catalog__sub-item">
+                <a href="#" class="catalog__sub-link icon icon--next" id="class">
+                  Класические гитары
+                </a>
+                <ul class="catalog__sub-sub-list">
+                  {% set catalogSubSubList = [
+                  {href: '#', text: 'Медиаторы'},
+                  {href: '#', text: 'Тренажеры для пальцев'},
+                  {href: '#', text: 'Стулья'},
+                  {href: '#', text: 'Слайды и каподастры'},
+                  {href: '#', text: 'Стойки и держатели'},
+                  {href: '#', text: 'Ремни для гитар'},
+                  {href: '#', text: 'Чехлы и кейсы'},
+                  {href: '#', text: 'Звукосниматели'},
+                  {href: '#', text: 'Комплектующие'},
+                  ] %}
+                  <li class="catalog__sub-sub-item catalog__sub-sub-item--title catalog__sub-sub-item--back">
+                    <strong class="icon icon--prev">Вернуться в Гитары</strong>
+                  </li>
+                  {% for catalogSubSubItem in catalogSubSubList %}
+                  <li class="catalog__sub-sub-item">
+                    <a href="{{ catalogSubItem.href }}" class="catalog__sub-sub-link">
+                      {{ catalogSubSubItem.text }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              {% for catalogSubItem in catalogSubList %}
+              <li class="catalog__sub-item">
+                <a href="{{ catalogSubItem.href }}"
+                  class="catalog__sub-link {% if catalogSubItem.isNext %} icon icon--next {% endif %}">
+                  {{ catalogSubItem.text }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% for catalogItem in catalogList %}
+          <li class="catalog__item">
+            <a href="{{informItem.href }}"
+              class="catalog__link catalog__link--mobile {% if catalogItem.isNext %} icon icon--next {% endif %}">
+              {{ catalogItem.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="catalog__info info">
+          <div class="info__wrap">
+            <div class="info__card c-card">
+              <div class="c-card__wrap">
+                <div class="c-card__content anons">
+                  <div class="anons__wrap">
+                    <div class="anons__title title title--card">
+                      Электрогитара
+                    </div>
+                    <div class="anons__name">
+                      Ibanez RG450<br>Japan 2001
+                    </div>
+                    <div class="anons__price price price--card">
+                      <span class="price__new">49 990 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-card__visual">
+                  <div class="c-card__cover">
+                    <img src="img\catalog-card.jpg" alt="Гитара" class="c-card__img">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info__firms firms">
+              {% set firmList = [
+              {href: '#', src: 'img/firm-1.png'},
+              {href: '#', src: 'img/firm-2.png'},
+              {href: '#', src: 'img/firm-3.png'},
+              {href: '#', src: 'img/firm-4.png'},
+              {href: '#', src: 'img/firm-5.png'},
+              ] %}
+              <ul class="firms__list">
+                {% for firmItem in firmList %}
+                <li class="firms__item">
+                  <a href="{{ firmItem.href }}" class="firms__link">
+                    <img src="{{ firmItem.src }}" alt="" class="firm__img">
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__servis">
+          <div class="servis">
+            <ul class="servis__list servis__list--catalog">
+              <li class="servis__item servis__item--catalog">
+                <a href="#" class="servis__link servis__link--catalog">
+                  Корзина (<span>2</span>)
+                  <div class="servis__amount servis__amount--catalog" id="amount">2</div>
+                  <svg class="s-icon servis__icon servis__icon--catalog">
+                    <use href="#basket"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="servis__item servis__item--catalog">
+                <a href="#" class="servis__link servis__link--catalog" name="Профиль" id="profile">
+                  Профиль
+                  <img src="img/profile-icon.svg" class="s-icon servis__icon servis__icon--catalog" alt="">
+                  <!--<svg class="s-icon servis__icon servis__icon--catalog">
+                    <use href="#profile"></use>
+                  </svg>-->
+                </a>
+              </li>
+              <li class="servis__item servis__item--catalog">
+                <a href="#" class="servis__link servis__link--catalog" name="Сравнение">
+                  Сравнение товаров
+                  <svg class="s-icon servis__icon servis__icon--catalog">
+                    <use href="#comparison"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="servis__item servis__item--catalog">
+                <a href="#" class="servis__link servis__link--catalog" name="Избранное">
+                  Избранное
+                  <svg class="s-icon servis__icon servis__icon--catalog">
+                    <use href="#favorites"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__phone catalog__phone--mobile">
+          <div class="phone">
+            <a href="#" class="phone__link phone__link--mob">8 800 611 00 97</a>
+          </div>
+        </div>
+        <div class="catalog__soci">
+          <div class="soci">
+            {% set sociList = [
+            {href: '#', id: '#vk', icon: 'soci__icon--vk'},
+            {href: '#', id: '#fb', icon: 'soci__icon--fb'},
+            {href: '#', id: '#in', icon: 'soci__icon--in'},
+            {href: '#', id: '#tw', icon: 'soci__icon--tw'},
+            ] %}
+            <ul class="soci__list soci__list--mob">
+              {% for sociItem in sociList %}
+              <li class="soci__item">
+                <a href="{{ sociItem.href }}" class="soci__link">
+                  <svg class="soci__icon {{ sociItem.icon }}">
+                    <use href="{{ sociItem.id }}"></use>
+                  </svg>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__profile">
+      <form action="/" class="profile-form">
+        <div class="profile-form__wrap">
+          <button class="profile-form__btn">
+            <svg class="s-icon profile-form__icon">
+              <use href="#crost"></use>
+            </svg>
+          </button>
+          <h2 class="profile-form__title">
+            Войти в профиль
+          </h2>
+          <div class="profile-form__description">
+            Или зарегистрироваться
+          </div>
+          <label for="tel" class="profile-form__label">
+            <strong>Номер телефона</strong>
+          </label>
+          <input type="tel" class="profile-form__input" id="tel" placeholder="+7(___)___-__-__">
+          <button type="submit" class="profile-form__button">Получить СМС код</button>
+          <div class="profile-form__text">
+            Нажимая кнопку «Получить СМС код», я соглашаюсь с
+            <a href="#" class="profile-form__link">политикой обработки персональных данных</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>

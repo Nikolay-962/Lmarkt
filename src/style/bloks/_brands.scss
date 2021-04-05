@@ -1,0 +1,47 @@
+
+.brands {
+  &__title {
+    margin-top: 52px;
+    margin-bottom: 42px;
+    @include media-down(md) {    
+      text-align: center;      
+    }
+  }
+}
+.brand {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    @include media-down(md) {              
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+    }  
+  }
+  &__item {
+    justify-self: center;
+    align-self: center;
+  }
+  &__link {
+    display: block;
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+.b-head {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 30px;
+    @include media-down(md) {              
+      display: none;
+    } 
+  }
+  &__item {
+    justify-self: center;
+    align-self: center;
+  }
+}

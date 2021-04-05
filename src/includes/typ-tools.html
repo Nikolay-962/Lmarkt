@@ -1,0 +1,184 @@
+{% set toolCardListOne = [
+{href: '#', text: 'Акустические гитары'},
+{href: '#', text: 'Классические гитары'},
+{href: '#', text: 'Электрогитары'},
+{href: '#', text: 'Классические гитары' },
+{href: '#', text: 'Акустические бас-гитары'},
+{href: '#', text: 'Бас-гитары'},
+{href: '#', text: 'Укулеле' }
+] %}
+
+{% set toolCardListTwo = [
+{href: '#', text: 'Синтезаторы'},
+{href: '#', text: 'Цифровое пианино'},
+{href: '#', text: 'Цифровые органы'},
+{href: '#', text: 'Акустические клавишные инструменты' },
+{href: '#', text: 'IDI-клавиатуры'},
+] %}
+
+{% set toolCardListThree = [
+{href: '#', text: 'Акустические ударные'},
+{href: '#', text: 'Электронные ударные'},
+{href: '#', text: ' Тарелки'},
+{href: '#', text: 'Стойки' },
+{href: '#', text: 'Рамы'},
+{href: '#', text: 'Педали'},
+] %}
+
+{% set toolCardListFour = [
+{href: '#', text: 'Блок-флейты'},
+{href: '#', text: 'Флейты'},
+{href: '#', text: 'Саксофоны'},
+{href: '#', text: 'Кларнеты' },
+{href: '#', text: 'Трубы'},
+{href: '#', text: 'Тромбоны'},
+] %}
+
+{% set toolCardListFive = [
+{href: '#', text: 'Блок-флейты'},
+{href: '#', text: 'Флейты'},
+{href: '#', text: 'Саксофоны'},
+{href: '#', text: 'Кларнеты' },
+{href: '#', text: 'Трубы'},
+{href: '#', text: 'Тромбоны'},
+] %}
+
+<div class="typ-tools">
+  <h2 class="typ-tools__title s-title">
+    Инструменты по видам
+  </h2>
+  <div class="typ-tools__tools-slider tools-slider">
+    <div class="tools-slider__list">
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-1.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Струнные
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListOne %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-2.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Клавишные
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListTwo %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-3.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Ударные
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListThree %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-4.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Духовые
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListFour %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-5.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Язычковые
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListFive %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tools-slider__item tool-card">
+        <div class="tool-card__wrap">
+          <a href="#" class="title-link">
+            <div class="tool-card__visual">
+              <div class="tool-card__cover">
+                <img src="img/vid-2.svg" alt="гитара" class="tool-card__img">
+              </div>
+            </div>
+            <h3 class="tool-card__title">
+              Клавишные
+            </h3>
+          </a>
+          <ul class="tool-card__list">
+            {% for toolCardItem in toolCardListTwo %}
+            <li class="tool-card__item">
+              <a href="{{ toolCardItem.href }}" class="tool-card__link">{{ toolCardItem.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="rectangle">
+      <button class="bottom-arrow">
+      </button>
+    </div>
+  </div>
+</div>

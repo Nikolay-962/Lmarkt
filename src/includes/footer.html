@@ -1,0 +1,138 @@
+{% set informListOne = [
+{href: '#', text: 'Оплата и доставка'},{href: '#', text: 'Обратная связь'},
+{href: '#', text: 'Мои заказы'},{href: '#', text: 'Карта скидок'},
+{href: '#', text: 'Правовая информация'}
+] %}
+{% set informListTwo = [
+{href: '#', text: 'Начать сотрудничество'},{href: '#', text: 'Консультация'},
+{href: '#', text: 'Справка'}
+] %}
+{% set informListThree = [
+{href: '#', text: 'О нас'},{href: '#', text: 'Реквизиты'},
+{href: '#', text: 'Контакты'},{href: '#', text: 'Вакансии'}
+] %}
+
+<footer class="footer">
+  <div class="footer__wrap">
+    <div class="foot-body">
+      <div class="foot-body__wrap">
+        <div class="foot-body__item inform">
+          <div class="inform__wrap">
+            <h3 class="inform__title">
+              Покупателям
+            </h3>
+            <ul class="inform__list">
+              {% for informItem in informListOne %}
+              <li class="inform__item">
+                <a href="{{ informItem.href }}" class="inform__link">{{ informItem.text }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="foot-body__item inform">
+          <div class="inform__wrap">
+            <h3 class="inform__title">
+              Партнёрам
+            </h3>
+            <ul class="inform__list">
+              {% for informItem in informListTwo %}
+              <li class="inform__item">
+                <a href="{{ informItem.href }}" class="inform__link">{{ informItem.text }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="foot-body__item inform">
+          <div class="inform__wrap">
+            <h3 class="inform__title">
+              Компания
+            </h3>
+            <ul class="inform__list">
+              {% for informItem in informListThree %}
+              <li class="inform__item">
+                <a href="{{ informItem.href }}" class="inform__link">{{ informItem.text }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="foot-body__item foot-body__item--bottom inform">
+          <div class="inform__wrap">
+            <h3 class="inform__title inform__title--last">
+              Приложение
+            </h3>
+            <ul class="inform__parts">
+              <li class="inform__item">
+                <a href="#" class="inform__link inform__link--img">
+                  <picture>
+                    <source srcset="img/foot1-1.png" media="(max-width: 550px)">
+                    <img src="img/foot-1.png" alt="" class="inform__img">
+                  </picture>
+                </a>
+              </li>
+              <li class="inform__item">
+                <a href="#" class="inform__link inform__link--img">
+                  <picture>
+                    <source srcset="img/foot1-2.png" media="(max-width: 550px)">
+                    <img src="img/foot-2.png" alt="" class="inform__img">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-copiright">
+      <div class="foot-copiright__wrap">
+        <div class="foot-copiright__item">
+          <span class="foot-copiright__span">
+            © 2008–2020 ООО «ЛМАРКТ».
+          </span>
+        </div>
+        <div class="foot-copiright__item">
+          <div class="soci">
+            <ul class="soci__list soci__list--foot">
+              <li class="soci__item">
+                <a href="#" class="soci__link soci__link--foot">
+                  <svg class="soci__icon soci__icon--vk">
+                    <use href="#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soci__item">
+                <a href="#" class="soci__link soci__link--foot">
+                  <svg class="soci__icon soci__icon--fb">
+                    <use href="#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soci__item">
+                <a href="#" class="soci__link soci__link--foot">
+                  <svg class="soci__icon soci__icon--in">
+                    <use href="#in"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soci__item">
+                <a href="#" class="soci__link soci__link--foot">
+                  <svg class="soci__icon soci__icon--tw">
+                    <use href="#tw" class="icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-copiright__item">
+          <a href="#" class="f-phone-link">8 800 611 00 97</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
