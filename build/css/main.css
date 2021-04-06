@@ -1220,6 +1220,13 @@ body
     color: #a0148e;
 }
 
+.slider-top
+{
+    position: relative;
+
+    min-height: 0;
+}
+
 .slider-top__list
 {
     position: relative;

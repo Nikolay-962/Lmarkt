@@ -1,6 +1,8 @@
 
 
 .slider-top {
+  position: relative;
+  min-height: 0;
   &__list {
     position: relative;
   }
