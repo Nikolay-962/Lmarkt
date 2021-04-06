@@ -2,7 +2,9 @@ $(document).ready(function () {
   $('.slider-top__list').slick({
     dots: true,
     arrows: true,
-    adaptiveHight: true
+    adaptiveHight: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
   });
 
   $('.p-slider__list').slick({
