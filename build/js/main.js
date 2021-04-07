@@ -1,7 +1,5 @@
 "use strict"
 
-
-
 const sitiBtn = document.getElementById('town');
 const catalogBtn = document.getElementById('catalog');
 const tounLink = document.querySelectorAll('.scrol__item');
@@ -25,6 +23,7 @@ const clousCatalog = catalogList.firstElementChild;
 const catalogSoci = document.querySelector('.catalog__soci');
 const servisMobile = document.querySelector('.servis__list--catalog');
 const navMobile = document.querySelector('.nav__list--mobile');
+const catalogNav = document.querySelector('.catalog__nav')
 //Фиксирование страници при выпадающих окнах
 
 //Список городов
@@ -125,7 +124,8 @@ openMenu.addEventListener('click', () => {
   catalogList.classList.toggle('catalog__list--mobile');
   catalogSubList.classList.toggle('catalog__sub-list--mobile');
   catalogSubListTwo.classList.toggle('catalog__sub-sub-list--mobile');
-  catalogSoci.classList.toggle('catalog__soci--mobile')
+  catalogSoci.classList.toggle('catalog__soci--mobile');
+  catalogNav.classList.toggle('catalog__nav--mobile');
 });
 
 // открывание навигации в футере

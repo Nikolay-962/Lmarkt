@@ -569,6 +569,16 @@ body
     height: 100%;
 }
 
+.catalog__nav
+{
+    display: none;
+}
+
+.catalog__nav--mobile
+{
+    display: block;
+}
+
 .catalog__soci
 {
     display: none;

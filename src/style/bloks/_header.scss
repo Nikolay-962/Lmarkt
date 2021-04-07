@@ -303,13 +303,13 @@
 .catalog {
   position: relative;
   &__wrap {
+    @include flex($j-sb, $a-fs);
     position: absolute;
     z-index: 10;
     background-color: $col-white;
     padding: 40px;
     top: -11px;
-    left: 0;
-    @include flex($j-sb, $a-fs);
+    left: 0;  
     &--mobile {
       top: -92px;
       right: 0;
@@ -405,6 +405,12 @@
     z-index: 4;
    @media (max-width: 1160px)  {    
       display: none;      
+    }
+  }
+  &__nav {
+    display: none;
+    &--mobile {
+      display: block;
     }
   }
   &__soci {
