@@ -1157,6 +1157,8 @@ body
 
     display: block;
 
+    cursor: pointer;
+
     border: none;
 }
 
@@ -1191,6 +1193,8 @@ body
 
 .profile-form__label
 {
+    font-size: 14px;
+
     display: block;
 
     margin: 34px 0 14px;
@@ -1240,6 +1244,11 @@ body
     color: #2d0027;
 }
 
+.profile-form__text--none
+{
+    display: none;
+}
+
 .profile-form__link
 {
     color: #a0148e;
@@ -1257,6 +1266,10 @@ body
     position: absolute;
     top: 16px;
     left: 58px;
+
+    display: block;
+
+    cursor: pointer;
 
     opacity: .6;
     color: #a0148e;
@@ -1290,6 +1303,30 @@ body
     left: -30px;
 
     transform: rotate(-45deg);
+}
+
+.profile-form__time
+{
+    font-size: 15px;
+    line-height: 23px;
+
+    display: none;
+
+    text-align: left;
+
+    opacity: .5;
+    color: #2d0027;
+}
+
+.profile-form__time--block
+{
+    display: block;
+}
+
+.profile-form__cod
+{
+    color: #a0148e;
+    border: none;
 }
 
 .slider-top

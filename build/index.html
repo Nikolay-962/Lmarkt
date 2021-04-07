@@ -857,7 +857,7 @@
       <form action="/" class="profile-form">
         <div class="profile-form__wrap">
           <div class="profile-form__comback">
-            <span class="profile-form__span profile-form__span--two">
+            <span class="profile-form__span">
               Вернуться к вводу номера
             </span>
           </div>
@@ -869,18 +869,22 @@
           <h2 class="profile-form__title">
             Войти в профиль
           </h2>
-          <div class="profile-form__description profile-form__description--none">
+          <div class="profile-form__description ">
             Или зарегистрироваться
           </div>
           <label for="tel" class="profile-form__label">
-            <span class="profile-form__phone"><strong>Номер телефона</strong></span>
-            <span class="numer"></span>
+            <span><strong class="profile-form__phone">Номер телефона</strong></span>
+            <span class="number"></span>
           </label>
-          <input type="tel" class="profile-form__input" id="tel" placeholder="+7(___)___-__-__" required pattern="">
+          <input type="tel" class="profile-form__input" id="tel" placeholder="+7(___)___-__-__" required>
           <button type="submit" class="profile-form__button">Получить СМС код</button>
           <div class="profile-form__text">
             Нажимая кнопку «Получить СМС код», я соглашаюсь с
             <a href="#" class="profile-form__link">политикой обработки персональных данных</a>
+          </div>
+          <div class="profile-form__time">
+            Повторная отправка доступна через <span class="time"></span>
+            <button class="profile-form__cod">Повторно выслать код</button>
           </div>
         </div>
       </form>

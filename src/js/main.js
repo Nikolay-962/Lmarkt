@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 const sitiBtn = document.getElementById('town');
 const catalogBtn = document.getElementById('catalog');
 const tounLink = document.querySelectorAll('.scrol__item');
@@ -141,19 +143,20 @@ for (let footerNav of footerNavs) {
 const profileOpen = document.querySelector('.profile-form__wrap');
 const clousProfile = document.querySelector('.profile-form__btn');
 const openProfile = document.getElementById('profile');
-const openBacket = document.getElementById('purchase');
+const windowComeBack = profileOpen.querySelector('.profile-form__span');
 const profileButton = profileOpen.querySelector('.profile-form__button');
 const profileTitle = profileOpen.querySelector('.profile-form__title');
 const profilePhone = profileOpen.querySelector('.profile-form__phone');
 const phoneNumber = profileOpen.querySelector('.number');
 const profileText = profileOpen.querySelector('.profile-form__text');
+let phoneValue = document.getElementById('tel');
+
 
 // Эти две функции открывают окно попапа
 openProfile.addEventListener('click', () => {
   profileOpen.classList.add('profile-form__wrap--open');
   darkBackground.classList.add('active');
   darkBackground.style.zIndex = 9;
-
 });
 clousProfile.addEventListener('click', function () {
   profileOpen.classList.remove('profile-form__wrap--open');
@@ -161,7 +164,16 @@ clousProfile.addEventListener('click', function () {
 });
 
 // Меняем контент по клику на кнопку Получить СМС
-profileButton.addEventListener('click', function () {
-
-
+profileButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  windowComeBack.classList.add('profile-form__span--two');
+  profileTitle.textContent = 'Введите код';
+  profileTitle.nextElementSibling.classList.add('profile-form__description--none');
+  profilePhone.textContent = 'Код выслан на номер:' + '';
+  phoneNumber.textContent = phoneValue.value;
+  phoneValue.value = '';
+  phoneValue.placeholder = 'Введите код';
+  profileButton.textContent = 'Повтвердить';
+  profileText.classList.add('profile-form__text--none');
+  profileText.nextElementSibling.classList.add('profile-form__time--block');
 });
