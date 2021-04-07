@@ -21,7 +21,8 @@ const subBackOne = document.querySelector('.catalog__sub-item--back');
 const subSubBack = document.querySelector('.catalog__sub-sub-item--back');
 const clousCatalog = catalogList.firstElementChild;
 const catalogSoci = document.querySelector('.catalog__soci');
-
+const servisMobile = document.querySelector('.servis__list--catalog');
+const navMobile = document.querySelector('.nav__list--mobile');
 //Фиксирование страници при выпадающих окнах
 
 //Список городов
@@ -62,6 +63,8 @@ openList.addEventListener('click', () => {
     catalogSubList.classList.add('open');
     catalogWidth.style.width = "100%"
   }
+  servisMobile.style.display = "none";
+  navMobile.style.display = "none";
 });
 openListTwo.addEventListener('click', () => {
   if (catalogSubListTwo.classList.contains('open')) {
@@ -85,6 +88,8 @@ subBackOne.addEventListener('click', () => {
   if (catalogWidth.classList.contains('catalog__wrap--mobile')) {
     catalogSubList.classList.remove('open');
     catalogWidth.style.width = "100%"
+    servisMobile.style.display = "block";
+    navMobile.style.display = "block";
   }
 });
 
@@ -132,20 +137,31 @@ for (let footerNav of footerNavs) {
 }
 
 // попап "Войти в профиль"servis__item--menu
+
 const profileOpen = document.querySelector('.profile-form__wrap');
 const clousProfile = document.querySelector('.profile-form__btn');
 const openProfile = document.getElementById('profile');
 const openBacket = document.getElementById('purchase');
+const profileButton = profileOpen.querySelector('.profile-form__button');
+const profileTitle = profileOpen.querySelector('.profile-form__title');
+const profilePhone = profileOpen.querySelector('.profile-form__phone');
+const phoneNumber = profileOpen.querySelector('.number');
+const profileText = profileOpen.querySelector('.profile-form__text');
 
+// Эти две функции открывают окно попапа
 openProfile.addEventListener('click', () => {
   profileOpen.classList.add('profile-form__wrap--open');
   darkBackground.classList.add('active');
   darkBackground.style.zIndex = 9;
 
 });
-
-clousProfile.addEventListener('click', function (e) {
-  e.preventDefault();
+clousProfile.addEventListener('click', function () {
   profileOpen.classList.remove('profile-form__wrap--open');
   darkBackground.classList.remove('active');
+});
+
+// Меняем контент по клику на кнопку Получить СМС
+profileButton.addEventListener('click', function () {
+
+
 });

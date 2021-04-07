@@ -345,6 +345,22 @@
             </ul>
           </div>
         </div>
+        <div class="catalog__nav">
+          <nav class="nav">
+            {% set navList = [
+            {title: 'О маркетплейсе'},
+            {title: 'Где мойзаказ?'},
+            {title: 'Контакты'}
+            ]%}
+            <ul class="nav__list nav__list--mobile">
+              {% for navItem in navList %}
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--mobile">{{navItem.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
         <div class="catalog__phone catalog__phone--mobile">
           <div class="phone">
             <a href="#" class="phone__link phone__link--mob">8 800 611 00 97</a>
@@ -376,6 +392,11 @@
     <div class="header__profile">
       <form action="/" class="profile-form">
         <div class="profile-form__wrap">
+          <div class="profile-form__comback">
+            <span class="profile-form__span profile-form__span--two">
+              Вернуться к вводу номера
+            </span>
+          </div>
           <button class="profile-form__btn">
             <svg class="s-icon profile-form__icon">
               <use href="#crost"></use>
@@ -384,13 +405,14 @@
           <h2 class="profile-form__title">
             Войти в профиль
           </h2>
-          <div class="profile-form__description">
+          <div class="profile-form__description profile-form__description--none">
             Или зарегистрироваться
           </div>
           <label for="tel" class="profile-form__label">
-            <strong>Номер телефона</strong>
+            <span class="profile-form__phone"><strong>Номер телефона</strong></span>
+            <span class="numer"></span>
           </label>
-          <input type="tel" class="profile-form__input" id="tel" placeholder="+7(___)___-__-__">
+          <input type="tel" class="profile-form__input" id="tel" placeholder="+7(___)___-__-__" required pattern="">
           <button type="submit" class="profile-form__button">Получить СМС код</button>
           <div class="profile-form__text">
             Нажимая кнопку «Получить СМС код», я соглашаюсь с
