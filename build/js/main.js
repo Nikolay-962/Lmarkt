@@ -203,7 +203,7 @@ const addZero = (num) => {
   }
 }
 
-let counter = 11;
+let counter = 60;
 function timer() {
   counter--;
   let prof = document.querySelector('.prof').innerHTML = '00' + ':' + addZero(counter);
