@@ -173,7 +173,57 @@ profileButton.addEventListener('click', function (evt) {
   phoneNumber.textContent = phoneValue.value;
   phoneValue.value = '';
   phoneValue.placeholder = 'Введите код';
-  profileButton.textContent = 'Повтвердить';
+  profileButton.classList.add('profile-form__button--clouse');
+  profileButton.nextElementSibling.classList.add('profile-form__button-two--open');
   profileText.classList.add('profile-form__text--none');
   profileText.nextElementSibling.classList.add('profile-form__time--block');
+
 });
+
+windowComeBack.addEventListener('click', () => {
+  windowComeBack.classList.remove('profile-form__span--two');
+  profileTitle.textContent = 'Войти в профиль';
+  profileTitle.nextElementSibling.classList.remove('profile-form__description--none');
+  profilePhone.textContent = 'Номер телефона';
+  phoneValue.placeholder = '+7(___)___-__-__';
+  profileButton.classList.remove('profile-form__button--clouse');
+  profileButton.nextElementSibling.classList.remove('profile-form__button-two--open');
+  profileText.classList.remove('profile-form__text--none');
+  profileText.nextElementSibling.classList.remove('profile-form__time--block');
+});
+profileButton.nextElementSibling.addEventListener('click', function () {
+  timer();
+});
+
+const addZero = (num) => {
+  if (num <= 9) {
+    return '0' + num;
+  } else {
+    return num;
+  }
+}
+
+let counter = 11;
+function timer() {
+  counter--;
+  let prof = document.querySelector('.prof').innerHTML = '00' + ':' + addZero(counter);
+  let timerId = setTimeout('timer()', 1000);
+  if (counter <= 0) {
+    clearTimeout(timerId);
+  }
+}
+
+
+/*
+
+let timerLabel = document.querySelector('.prof');
+
+function timer() {
+  let date = new Date();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  timerLabel.innerHTML = '${min}:&{sec}'
+}
+setInterval(timer, 1000);
+console.log(timerLabel)
+*/

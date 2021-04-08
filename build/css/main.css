@@ -1245,6 +1245,30 @@ body
     background-color: #a0148e;
 }
 
+.profile-form__button--clouse
+{
+    display: none;
+}
+
+.profile-form__button-two
+{
+    display: none;
+
+    width: 100%;
+    margin: 15px 0 40px;
+    padding: 10px;
+
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-color: #a0148e;
+}
+
+.profile-form__button-two--open
+{
+    display: block;
+}
+
 .profile-form__text
 {
     font-size: 15px;
@@ -1317,7 +1341,7 @@ body
 
 .profile-form__time
 {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 23px;
 
     display: none;
