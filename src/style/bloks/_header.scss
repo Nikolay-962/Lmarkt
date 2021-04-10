@@ -629,6 +629,9 @@
         }    
       }
     }
+    &--profile {
+      position: relative;
+    }
   }
   &__icon {
     display: block;
@@ -692,6 +695,42 @@
     &--catalog {
       display: none;
     }
+  }
+  &__sub-list {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    background-color: #fff;
+    padding: 10px 20px;
+    right: -100px;
+    left: -100px;
+    &--open {
+      display: block;
+    }
+  }
+  &__sub-link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 40px;
+    color: #3F0738;
+    &--one {
+      color: #00C2E0;
+    }
+    &--two {
+      color: #007be0;
+    }
+    &:hover {
+      color: $col-pink;
+    }
+  }
+  &__sub-btn {
+    color: #2D0027;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
   }
 }
 .opacity {
@@ -1025,4 +1064,8 @@
     color: $col-pink;
     border: none;
   }
+}
+
+.seconds {
+  margin-left: 10px;
 }

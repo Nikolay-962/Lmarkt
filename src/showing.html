@@ -1,31 +1,19 @@
 {% extends "templates/default.html" %}
-{% set title = "Lmarkt"%}
+{% set title = "showing"%}
 {% block content %}
 
-<body>
+<body id="classic guitar">
   <div class="page">
     <div class="substrate"></div>
     <div class="container">
       {% include "includes/header.html" %}
       <main class="main">
         <div class="main__wrap">
-          <div class="main__slider-top">
-            {% include "includes/slider-top.html" %}
-          </div>
-          <section class="main__pop-categories">
-            {% include "includes/pop-categories.html" %}
-          </section>
           <section class="main__pop-goods">
             {% include "includes/pop-goods.html" %}
           </section>
           <section class="main__typ-tools">
             {% include "includes/typ-tools.html" %}
-          </section>
-          <section class="main__instrument">
-            {% include "includes/instrument.html" %}
-          </section>
-          <section class="main__brands">
-            {% include "includes/brands.html" %}
           </section>
         </div>
       </main>
@@ -113,12 +101,6 @@
     <symbol viewBox="0 0 18 19" id="crost">
       <path class="servis-icon" d="M1 1.5L9 9.5M17 17.5L9 9.5M9 9.5L17 1.5L1 17.5" stroke="#A0148E"
         stroke-width="1.5" />
-    </symbol>
-    <symbol viewBox="0 0 18 19" id="crost">
-
-    </symbol>
-    <symbol viewBox="0 0 18 19" id="crost">
-
     </symbol>
   </svg>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

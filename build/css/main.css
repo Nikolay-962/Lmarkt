@@ -839,6 +839,11 @@ body
     display: none;
 }
 
+.servis__item--profile
+{
+    position: relative;
+}
+
 .servis__icon
 {
     display: block;
@@ -934,6 +939,62 @@ body
 .servis__amount--catalog
 {
     display: none;
+}
+
+.servis__sub-list
+{
+    position: absolute;
+    z-index: 9;
+    right: -100px;
+    left: -100px;
+
+    display: none;
+
+    padding: 10px 20px;
+
+    background-color: #fff;
+}
+
+.servis__sub-list--open
+{
+    display: block;
+}
+
+.servis__sub-link
+{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+
+    color: #3f0738;
+}
+
+.servis__sub-link--one
+{
+    color: #00c2e0;
+}
+
+.servis__sub-link--two
+{
+    color: #007be0;
+}
+
+.servis__sub-link:hover
+{
+    color: #a0148e;
+}
+
+.servis__sub-btn
+{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+
+    cursor: pointer;
+
+    opacity: .5;
+    color: #2d0027;
+    border: none;
 }
 
 .opacity
@@ -1363,6 +1424,11 @@ body
     border: none;
 }
 
+.seconds
+{
+    margin-left: 10px;
+}
+
 .slider-top
 {
     position: relative;
@@ -1620,8 +1686,6 @@ body
 .p-slider__list
 {
     position: relative;
-
-    display: flex;
 }
 
 .p-slider__item
@@ -1978,7 +2042,11 @@ body
 
 .p-card__img
 {
+    max-width: 100%;
     margin: 0 auto;
+
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .p-price__wrap

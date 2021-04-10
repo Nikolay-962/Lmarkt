@@ -123,6 +123,8 @@
   }
   &__img {
    margin: 0 auto;
+   object-fit: cover;
+   max-width: 100%;
   }
 }
 .p-price {
