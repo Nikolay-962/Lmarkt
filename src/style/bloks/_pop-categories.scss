@@ -21,8 +21,7 @@
   min-height: 0;
   &__list {
     position: relative;
-    
-    
+    display: flex;    
   }
   &__item {
     margin-right: 26px;
@@ -116,6 +115,7 @@
  
   &__cover { 
      position: relative; 
+     
     &::before {
       content: "";
       position: absolute;
@@ -140,7 +140,8 @@
   &__img {
     max-width: 100%;
     height: auto;
-    object-fit: cover;   
+    object-fit: cover;
+    
   }
   &__link {
     display: block;

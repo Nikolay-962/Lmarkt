@@ -93,7 +93,7 @@
     <div class="header__h-main h-main">
       <div class="h-main__wrap">
         <div class="h-main__logo logo">
-          <a href="#" class="logo__link">
+          <a href="./index.html" class="logo__link">
             <img src="img/logo.svg" alt="logo" class="logo__img">
           </a>
         </div>
@@ -307,17 +307,17 @@
             </div>
             <div class="info__firms firms">
               {% set firmList = [
-              {href: '#', src: 'img/firm-1.png'},
-              {href: '#', src: 'img/firm-2.png'},
-              {href: '#', src: 'img/firm-3.png'},
-              {href: '#', src: 'img/firm-4.png'},
-              {href: '#', src: 'img/firm-5.png'},
+              {href: '#', src: 'img/firm-1.png', firm: 'yamaha'},
+              {href: '#', src: 'img/firm-2.png', firm: 'shure'},
+              {href: './showing.html', src: 'img/firm-3.png', firm: 'casio'},
+              {href: '#', src: 'img/firm-4.png', firm: 'ibanes'},
+              {href: '#', src: 'img/firm-5.png', firm: 'corg'},
               ] %}
               <ul class="firms__list">
                 {% for firmItem in firmList %}
                 <li class="firms__item">
                   <a href="{{ firmItem.href }}" class="firms__link">
-                    <img src="{{ firmItem.src }}" alt="" class="firm__img">
+                    <img src="{{ firmItem.src }}" alt="{{ firmItem.firm }}" class="firm__img">
                   </a>
                 </li>
                 {% endfor %}

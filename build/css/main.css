@@ -1439,6 +1439,8 @@ body
 .slider-top__list
 {
     position: relative;
+
+    display: flex;
 }
 
 .slick-list
@@ -1686,6 +1688,8 @@ body
 .p-slider__list
 {
     position: relative;
+
+    display: flex;
 }
 
 .p-slider__item
@@ -2327,6 +2331,7 @@ body
 
 .tool-card__img
 {
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -2417,13 +2422,13 @@ body
 
 .instrument__list
 {
-    min-width: 0;
+    display: flex;
+
     margin-top: 100px;
 }
 
 .instrument__item
 {
-    min-width: 0;
     margin-right: 26px;
 }
 
@@ -2769,7 +2774,7 @@ body
     .h-top__region
     {
         position: absolute;
-        top: 70px;
+        top: 47px;
         right: 0;
     }
 
@@ -2988,8 +2993,15 @@ body
         left: -16px;
     }
 
+    .slider-top__list .slick-dots li button
+    {
+        display: none;
+    }
+
     .visual__s-content
     {
+        top: 6px;
+        bottom: 0;
         left: 50%;
 
         transform: translateX(-50%);
@@ -2997,11 +3009,14 @@ body
 
     .s-content__price
     {
+        margin-top: 6px;
+
         text-align: center;
     }
 
     .title
     {
+        font-size: 30px;
         line-height: 40px;
 
         text-align: center;
@@ -3096,6 +3111,12 @@ body
         left: 29px;
     }
 
+    .slider-top__list .slick-arrow
+    {
+        width: 30px;
+        height: 28px;
+    }
+
     .s-content
     {
         text-align: center;
@@ -3118,14 +3139,19 @@ body
 
     .price__new
     {
+        font-size: 13px;
+
         margin: 0;
+        padding: 4px 8px;
     }
 
     .price__old
     {
+        font-size: 13px;
+
         display: block;
 
-        margin-top: 20px;
+        margin-top: 6px;
     }
 
     .s-title

@@ -50,12 +50,14 @@
 .instrument {
   position: relative;
   &__list {
+    display: flex;
     margin-top: 100px;
-    min-width: 0;
   }
   &__item {
     margin-right: 26px;
-    min-width: 0;
+    @include media-down(md) {    
+
+    }
   }
 }
 .instrument__list .slick-arrow {

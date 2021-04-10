@@ -2,18 +2,18 @@
 {% set title = "showing"%}
 {% block content %}
 
-<body id="classic guitar">
+<body id="classic">
   <div class="page">
     <div class="substrate"></div>
     <div class="container">
       {% include "includes/header.html" %}
       <main class="main">
         <div class="main__wrap">
+          <div class="main__guitars">
+            {% include "includes/guitars.html" %}
+          </div>
           <section class="main__pop-goods">
             {% include "includes/pop-goods.html" %}
-          </section>
-          <section class="main__typ-tools">
-            {% include "includes/typ-tools.html" %}
           </section>
         </div>
       </main>

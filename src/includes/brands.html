@@ -1,10 +1,10 @@
 {% set brandList = [
 
-{href: '#', src: 'img/firm-1.png', mob: 'img/firm1-1.png', alt: 'yamaha'},
-{href: '#', src: 'img/firm-2.png', mob: 'img/firm1-2.png'},
-{href: '#', src: 'img/firm-3.png', mob: 'img/firm1-3.png'},
-{href: '#', src: 'img/firm-4.png', mob: 'img/firm1-4.png'},
-{href: '#', src: 'img/firm-5.png', mob: 'img/firm1-5.png'},
+{href: '#', src: 'img/firm-1.png', mob: 'img/firm1-1.png', firm: 'yamana'},
+{href: '#', src: 'img/firm-2.png', mob: 'img/firm1-2.png', firm: 'shure'},
+{href: './showing.html', src: 'img/firm-3.png', mob: 'img/firm1-3.png', firm: 'casio'},
+{href: '#', src: 'img/firm-4.png', mob: 'img/firm1-4.png', firm: 'ibanes'},
+{href: '#', src: 'img/firm-5.png', mob: 'img/firm1-5.png', firm: 'korg'},
 {href: '#', src: 'img/firm-6.png', mob: 'img/firm1-6.png', alt: 'yamaha'},
 {href: '#', src: 'img/firm-7.png', mob: 'img/firm1-7.png'},
 {href: '#', src: 'img/firm-8.png', mob: 'img/firm1-8.png'},
@@ -43,10 +43,10 @@
     <div class="brand__body">
       {% for brandItem in brandList %}
       <div class="brand__item">
-        <a href="#" class="brand__link">
+        <a href="{{ brandItem.href }}" class="brand__link">
           <picture>
             <source srcset="{{ brandItem.mob }}" media="(max-width: 1020px)">
-            <img src="{{ brandItem.src }}" alt="{{ brandItem.alt }}" class="brand__img">
+            <img src="{{ brandItem.src }}" alt="{{ brandItem.firm }}" class="brand__img">
           </picture>
         </a>
       </div>
