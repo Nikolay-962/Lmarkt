@@ -3,7 +3,7 @@
     <div class="header__h-top h-top">
       <div class="h-top__wrap">
         <div class="h-top__region region">
-          <button type="button" class="region__button" name="Регион" id="town">
+          <button type="button" class="region__button" id="town">
             Москва
           </button>
           <div class="region__sities siti">
@@ -12,7 +12,7 @@
                 <span class="siti__m-main">
                   Нижний Новгород
                 </span>
-                <a href="#" class="siti__link" aria-label="смотреть постоматы">
+                <a href="#" class="siti__link">
                   смотреть пункты выдачи и постоматы
                 </a>
               </div>
@@ -98,13 +98,13 @@
           </a>
         </div>
         <div class="h-main__catalog-btn catalog-btn">
-          <button type="button" class="catalog-btn__button" name="Каталог" id="catalog">
+          <button type="button" class="catalog-btn__button" id="catalog">
             Каталог
           </button>
         </div>
         <div class="h-main__search">
           <div class="search">
-            <input type="text" class="search__field" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <input type="text" class="search__field" placeholder="Поиск по сайту">
             <button class="search__btn" name="Поиск">
               <img src="img/search-icon.svg" alt="лупа" class="search__img">
             </button>
@@ -117,7 +117,7 @@
           <div class="servis">
             <ul class="servis__list">
               <li class="servis__item servis__item--menu">
-                <button type="button" class="servis__btn servis__btn--menu" name="menu">
+                <button type="button" class="servis__btn servis__btn--menu">
                   <svg class="s-icon servis__icon servis__icon--menu">
                     <use href="#menu"></use>
                   </svg>
@@ -125,7 +125,7 @@
                 </button>
               </li>
               <li class="servis__item servis__item--phone">
-                <a href="#" class="servis__link" name="telephone">
+                <a href="#" class="servis__link">
                   <svg class="s-icon servis__icon servis__icon--phone">
                     <use href="#phone"></use>
                   </svg>
@@ -133,7 +133,7 @@
                 </a>
               </li>
               <li class="servis__item servis__item--favorites">
-                <a href="#" class="servis__link" name="favorites">
+                <a href="#" class="servis__link">
                   <svg class="s-icon servis__icon servis__icon--favorites">
                     <use href="#favorites"></use>
                   </svg>
@@ -141,7 +141,7 @@
                 </a>
               </li>
               <li class="servis__item servis__item--comparison">
-                <a href="#" class="servis__link" name="comparison">
+                <a href="#" class="servis__link">
                   <svg class="s-icon servis__icon servis__icon--comparison">
                     <use href="#comparison"></use>
                   </svg>
@@ -149,11 +149,11 @@
                 </a>
               </li>
               <li class="servis__item servis__item--profile">
-                <a href="#" class="servis__link" name="profile" id="profile">
-                  <img src="img/profile-icon.svg" class="s-icon servis__icon servis__icon--profile" alt="">
-                  <!--<svg class="s-icon servis__icon servis__icon--profile">
-                    <use href="#profile"></use>
-                  </svg>-->
+                <a href="#" class="servis__link" id="profile">
+                  <!--<img src="img/profile-icon.svg" class="s-icon servis__icon servis__icon--profile" alt="">-->
+                  <svg class="s-icon servis__icon servis__icon--profile">
+                    <use href="#prof"></use>
+                  </svg>
                   Профиль
                 </a>
                 <ul class="servis__sub-list ">
@@ -173,12 +173,12 @@
                     <a href="#" class="servis__sub-link servis__sub-link--five"> Партнёрская программа</a>
                   </li>
                   <li class="servis__sub-item">
-                    <button class="servis__sub-btn" name="exid">Выход</button>
+                    <button class="servis__sub-btn" is="exid">Выход</button>
                   </li>
                 </ul>
               </li>
               <li class="servis__item servis__item--basket">
-                <a href="#" class="servis__link" name="backet" id="purchase">
+                <a href="#" class="servis__link" id="purchase">
                   <div class="servis__amount" id="amount">2</div>
                   <svg class="s-icon servis__icon servis__icon--basket">
                     <use href="#basket"></use>
@@ -331,23 +331,23 @@
               <li class="servis__item servis__item--catalog">
                 <a href="#" class="servis__link servis__link--catalog">
                   Корзина (<span>2</span>)
-                  <div class="servis__amount servis__amount--catalog" id="amo">2</div>
+                  <div class="servis__amount servis__amount--catalog">2</div>
                   <svg class="s-icon servis__icon servis__icon--catalog">
                     <use href="#basket"></use>
                   </svg>
                 </a>
               </li>
               <li class="servis__item servis__item--catalog">
-                <a href="#" class="servis__link servis__link--catalog" name="prof" id="profile">
+                <a href="#" class="servis__link servis__link--catalog"">
                   Профиль
-                  <!--<img src="img/profile-icon.svg" class="s-icon servis__icon servis__icon--catalog" alt="">-->
+                  <!--<img src=" img/profile-icon.svg" class="s-icon servis__icon servis__icon--catalog" alt="">-->
                   <svg class="s-icon servis__icon servis__icon--catalog">
                     <use href="#prof"></use>
                   </svg>
                 </a>
               </li>
               <li class="servis__item servis__item--catalog">
-                <a href="#" class="servis__link servis__link--catalog" name="comparison">
+                <a href="#" class="servis__link servis__link--catalog">
                   Сравнение товаров
                   <svg class="s-icon servis__icon servis__icon--catalog">
                     <use href="#comparison"></use>
@@ -355,7 +355,7 @@
                 </a>
               </li>
               <li class="servis__item servis__item--catalog">
-                <a href="#" class="servis__link servis__link--catalog" name="best">
+                <a href="#" class="servis__link servis__link--catalog">
                   Избранное
                   <svg class="s-icon servis__icon servis__icon--catalog">
                     <use href="#favorites"></use>
