@@ -1,0 +1,10 @@
+.video {
+  &__cover {
+    overflow: hidden;
+    
+  }
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}

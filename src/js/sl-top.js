@@ -4,7 +4,7 @@ $(document).ready(function () {
     arrows: true,
     adaptiveHight: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   });
 
   $('.p-slider__list').slick({
@@ -20,19 +20,20 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          centerMode: true,
         }
       },
       {
         breakpoint: 800,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
         }
       }
     ]
@@ -51,7 +52,7 @@ $(document).ready(function () {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: true,
         }
       },
       {
@@ -114,6 +115,7 @@ $(document).ready(function () {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         }
       }
     ]
