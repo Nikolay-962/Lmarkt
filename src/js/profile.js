@@ -75,26 +75,3 @@ function timer() {
     clearTimeout(timerId);
   }
 }
-/*
-openProfile.addEventListener('mouseover', function () {
-  const openSubList = document.querySelector('.servis__sub-list');
-  openSubList.classList.toggle('servis__sub-list--open');
-  darkBackground.classList.toggle('active');
-  darkBackground.style.zIndex = 9;
-  openProfile.style.zIndex = 9;
-});
-
-let date = new Date('Июль 1 2021 00:00:00')
-function counts() {
-  let now = new Date();
-  gap = date - now;
-  let days = Math.floor(gap / 1000 / 60 / 60 / 24);
-  let hours = Math.floor(gap / 1000 / 60 / 60) % 24;
-  let minutes = Math.floor(gap / 1000 / 60) % 60;
-  let seconds = Math.floor(gap / 1000) % 60;
-
-  profileOpen.querySelector('.minetes').innerHTML = minutes;
-  profileOpen.querySelector('.seconds').innerHTML = seconds;
-}
-let timerStart = setInterval(counts, 1000);
-*/
