@@ -1,4 +1,4 @@
-"use strict"
+
 /*
 const images = document.querySelectorAll('.slider-top__img');
 const sliderLine = document.querySelector('.slider-top__list');

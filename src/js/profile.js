@@ -41,7 +41,8 @@ profileButton.addEventListener('click', function (evt) {
 
 });
 
-windowComeBack.addEventListener('click', () => {
+windowComeBack.addEventListener('click', (evt) => {
+  evt.preventDefault();
   windowComeBack.classList.remove('profile-form__span--two');
   profileTitle.textContent = 'Войти в профиль';
   profileTitle.nextElementSibling.classList.remove('profile-form__description--none');
