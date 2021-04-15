@@ -3094,7 +3094,7 @@ body
 
     .cost
     {
-        font-size: 13px;
+        font-size: 1px;
 
         margin: 0;
         padding: 6px 10px;
@@ -3234,9 +3234,6 @@ body
 
     .cost
     {
-        font-size: 14px;
-
-        margin: 0;
         padding: 0 8px;
     }
 
