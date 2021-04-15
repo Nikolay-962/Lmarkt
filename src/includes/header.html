@@ -17,12 +17,12 @@
                 </a>
               </div>
               <div class="siti__search">
-                <div class="search">
-                  <input type="text" class="search__field" placeholder="Введите название вашего">
-                  <button class="search__btn">
+                <form action="/" class="search">
+                  <input type="text" class="search__field" placeholder="Введите название вашего города">
+                  <button class="search__btn" type="submit">
                     <img src="img/search-icon.svg" alt="лупа" class="search__img">
                   </button>
-                </div>
+                </form>
               </div>
               <div class="siti__scrol scrol">
                 <div class="scrol__wrap">
@@ -102,14 +102,14 @@
             Каталог
           </button>
         </div>
-        <div class="h-main__search">
+        <form action="/" class="h-main__search">
           <div class="search">
             <input type="text" class="search__field" placeholder="Поиск по сайту">
-            <button class="search__btn">
+            <button class="search__btn" type="submit">
               <img src="img/search-icon.svg" alt="лупа" class="search__img">
             </button>
           </div>
-        </div>
+        </form>
         <div class="h-main__phone phone">
           <a href="#" class="phone__link">8 800 611 00 97</a>
         </div>
@@ -364,7 +364,7 @@
           </div>
         </div>
         <div class="catalog__nav">
-          <nav class="nav">
+          <div class="nav">
             {% set navList = [
             {title: 'О маркетплейсе'},
             {title: 'Где мойзаказ?'},
@@ -377,7 +377,7 @@
               </li>
               {% endfor %}
             </ul>
-          </nav>
+          </div>
         </div>
         <div class="catalog__phone catalog__phone--mobile">
           <div class="phone">

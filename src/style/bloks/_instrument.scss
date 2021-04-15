@@ -129,22 +129,23 @@
     flex-shrink: 0;
     margin: 0;   
     text-transform: uppercase;
+    @include media-down(sm) {    
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
+
   &__name {
     font-size: 30px;
     line-height: 36px;
     color: #fff;
     font-weight: bold;
     letter-spacing: .14em;
-    @include media-down(sm) {    
-      font-size: 16px;
-      line-height: 40px;
-    }
     &--center {
       font-size: 54px;
       line-height: 60px;
       @include media-down(sm) {    
-        font-size: 34px;
+        font-size: 30px;
         line-height: 40px;
       }
     }
@@ -158,4 +159,14 @@
   font-size: 30px;
   line-height: 46px;
   max-width: 142px;
+  @include media-down(md) { 
+    padding: 6px 10px;   
+    margin: 0;
+    font-size: 13px;       
+  }
+  @include media-down(sm) { 
+    padding: 0px 8px;   
+    margin: 0;
+    font-size: 14px;       
+  }
 }

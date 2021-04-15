@@ -198,6 +198,7 @@
 .h-main {
   position: relative;
   &__wrap {
+    margin: 10px 0;
     @include flex($j-sb, $a-center);       
     @include media-down(md) {        
       display: flex;
@@ -213,7 +214,7 @@
     }
   }
   &__catalog-btn {    
-    flex-basis: 12%;
+    flex-basis: 14%;
     @include media-down(md) {    
       display: none;      
     }
@@ -231,8 +232,7 @@
       display: none;      
     }
   }
-  &__servis { 
-    margin: 10px 0;  
+  &__servis {  
     @include media-down(md) {    
       order: 1;
       margin: 0;   
@@ -245,7 +245,6 @@
   }
   &__img {
     display: block; 
-    margin-top: 5px;  
   }
 }
 .catalog-btn { 
@@ -254,13 +253,12 @@
   } 
   &__button {
     position: relative;
-    padding: 12px;
+    padding: 13px;
     width: 100%;
     background-color: $col-pink;
     color: $col-white;
     border: none;
-    border-radius: 3px;
-    outline: none;
+    border-radius: 3px;       
     cursor: pointer;
     &::before {
       position: absolute;
@@ -537,7 +535,7 @@
   }  
   &__field {
     display: block;
-    padding: 10px 10px 8px 20px;
+    padding: 12px 10px 10px 20px;
     width: 87%;
     color: $col-pink;
     border: none;
@@ -550,7 +548,8 @@
   }  
   &__btn {
     display: block;
-    padding: 6px 9.2px;
+    flex-basis: 45px;
+    height: 36px;
     border: none;
     outline: none;
     background-color: transparent;
@@ -558,6 +557,9 @@
     &:hover {
       background-color:#FFEFFD;
     }
+  }
+  &__img {
+    margin: 0 auto;
   } 
 }
 .servis {

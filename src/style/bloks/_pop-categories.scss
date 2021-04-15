@@ -19,12 +19,14 @@
 .p-slider {
   position: relative;
   min-height: 0;
+  overflow: hidden;
   &__list {
     position: relative;
-       
+    display: flex;
+    margin-left: -26px;
   }
   &__item {
-    margin-right: 26px;
+    margin-left: 26px;
   }
 }
 .slick-list {
@@ -46,9 +48,18 @@
   cursor: pointer;
   z-index: 5;
   font-size: 0;
+  @include media-down(md) {    
+    
+    top: 41%; 
+  }
+  @include media-down(sm) {    
+    width: 30px;
+    height: 28px; 
+    top: 41%; 
+  }
 }
 .p-slider__list .slick-prev {
-  left: 0;
+  left: 26px;
   background-image: url('../img/prev-icon.svg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -114,8 +125,7 @@
   }
  
   &__cover { 
-     position: relative; 
-     
+     position: relative;     
     &::before {
       content: "";
       position: absolute;
@@ -141,7 +151,7 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    
+    margin: 0 auto;
   }
   &__link {
     display: block;

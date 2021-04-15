@@ -14,6 +14,8 @@ $(document).ready(function () {
     variableWidth: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    //mobileFirst: true,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 1000,
@@ -90,7 +92,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 390,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
         }

@@ -311,13 +311,15 @@ body
 {
     display: flex;
 
+    margin: 10px 0;
+
     justify-content: space-between;
     align-items: center;
 }
 
 .h-main__catalog-btn
 {
-    flex-basis: 12%;
+    flex-basis: 14%;
 }
 
 .h-main__search
@@ -325,11 +327,6 @@ body
     margin: 0 14px;
 
     flex-grow: 1;
-}
-
-.h-main__servis
-{
-    margin: 10px 0;
 }
 
 .logo__link
@@ -340,8 +337,6 @@ body
 .logo__img
 {
     display: block;
-
-    margin-top: 5px;
 }
 
 .catalog-btn__wrap
@@ -354,14 +349,13 @@ body
     position: relative;
 
     width: 100%;
-    padding: 12px;
+    padding: 13px;
 
     cursor: pointer;
 
     color: #fff;
     border: none;
     border-radius: 3px;
-    outline: none;
     background-color: #a0148e;
 }
 
@@ -763,7 +757,7 @@ body
     display: block;
 
     width: 87%;
-    padding: 10px 10px 8px 20px;
+    padding: 12px 10px 10px 20px;
 
     cursor: pointer;
 
@@ -792,18 +786,25 @@ body
 {
     display: block;
 
-    padding: 6px 9.2px;
+    height: 36px;
 
     cursor: pointer;
 
     border: none;
     outline: none;
     background-color: transparent;
+
+    flex-basis: 45px;
 }
 
 .search__btn:hover
 {
     background-color: #ffeffd;
+}
+
+.search__img
+{
+    margin: 0 auto;
 }
 
 .servis__list
@@ -1433,12 +1434,18 @@ body
 {
     position: relative;
 
+    overflow: hidden;
+
     min-height: 0;
 }
 
 .slider-top__list
 {
     position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
 }
 
 .slick-list
@@ -1601,6 +1608,7 @@ body
 {
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 
     -o-object-fit: cover;
        object-fit: cover;
@@ -1696,17 +1704,23 @@ body
 {
     position: relative;
 
+    overflow: hidden;
+
     min-height: 0;
 }
 
 .p-slider__list
 {
     position: relative;
+
+    display: flex;
+
+    margin-left: -26px;
 }
 
 .p-slider__item
 {
-    margin-right: 26px;
+    margin-left: 26px;
 }
 
 .slick-list
@@ -1742,7 +1756,7 @@ body
 
 .p-slider__list .slick-prev
 {
-    left: 0;
+    left: 26px;
 
     background-image: url('../img/prev-icon.svg');
     background-repeat: no-repeat;
@@ -1859,6 +1873,7 @@ body
 {
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 
     -o-object-fit: cover;
        object-fit: cover;
@@ -3057,6 +3072,11 @@ body
         text-align: center;
     }
 
+    .p-slider__list .slick-arrow
+    {
+        top: 41%;
+    }
+
     .pop-goods__title
     {
         margin-bottom: 0;
@@ -3070,6 +3090,14 @@ body
         margin-bottom: 28px;
 
         text-align: center;
+    }
+
+    .cost
+    {
+        font-size: 13px;
+
+        margin: 0;
+        padding: 6px 10px;
     }
 
     .brands__title
@@ -3179,21 +3207,37 @@ body
         line-height: 22px;
     }
 
+    .p-slider__list .slick-arrow
+    {
+        top: 41%;
+
+        width: 30px;
+        height: 28px;
+    }
+
     .p-visual__cover
     {
         display: block;
     }
 
-    .poster__name
+    .poster__title
     {
         font-size: 16px;
-        line-height: 40px;
+        line-height: 30px;
     }
 
     .poster__name--center
     {
-        font-size: 34px;
+        font-size: 30px;
         line-height: 40px;
+    }
+
+    .cost
+    {
+        font-size: 14px;
+
+        margin: 0;
+        padding: 0 8px;
     }
 
     .foot-body__wrap
