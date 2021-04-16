@@ -1,10 +1,61 @@
-.video {
-  &__cover {
-    overflow: hidden;
+.guitar {
+  &__anons {
+    @include flex($j-fs, $a-center);
+  }  
+}
+.anons {
+  &__item:not(:last-child) {
+    margin-right: 16px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 10px;
+      right: -8px;
+      background-color: rgba(46, 0, 40, .3);
+      top: 8px;
+      transform: rotate(20deg);
+    }
+  }
+  &__link {
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(46, 0, 40);
+    opacity: 0.3;
     
   }
-  &__img {
-    max-width: 100%;
-    object-fit: cover;
+}
+.g-head {
+  &__wrap {
+    @include flex($j-sb, $a-fs);
+    margin-top: 30px;
   }
+  &__title {
+    font-size: 50px;
+    line-height: 65px;
+    color: #2D0027;
+    font-weight: bold;
+    margin: 0;
+  }
+  &__list {
+    @include flex($j-end, $a-center);
+  }
+  &__item {
+    margin-left: 52px;
+  }
+   &__icon {
+     position: absolute;
+     left: -36px;
+     top: -4px;
+     width: 27px;
+   }
+   &__h-link {
+     position: relative;
+    font-size: 11px;
+    line-height: 17px;    
+    color: #A0148E;   
+    opacity: 0.3;
+    
+   }
 }

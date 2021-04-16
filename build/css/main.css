@@ -1183,7 +1183,7 @@ body
 
 .s-icon
 {
-    width: 20px;
+    width: 27px;
     height: 20px;
 
     stroke: #a0148e;
@@ -1677,17 +1677,97 @@ body
             text-decoration-line: line-through;
 }
 
-.video__cover
+.guitar__anons
 {
-    overflow: hidden;
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.video__img
+.anons__item:not(:last-child)
 {
-    max-width: 100%;
+    position: relative;
 
-    -o-object-fit: cover;
-       object-fit: cover;
+    margin-right: 16px;
+}
+
+.anons__item:not(:last-child)::after
+{
+    position: absolute;
+    top: 8px;
+    right: -8px;
+
+    width: 1px;
+    height: 10px;
+
+    content: '';
+    transform: rotate(20deg);
+
+    background-color: rgba(46, 0, 40, .3);
+}
+
+.anons__link
+{
+    font-size: 13px;
+    line-height: 18px;
+
+    opacity: .3;
+    color: #2e0028;
+}
+
+.g-head__wrap
+{
+    display: flex;
+
+    margin-top: 30px;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.g-head__title
+{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 65px;
+
+    margin: 0;
+
+    color: #2d0027;
+}
+
+.g-head__list
+{
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.g-head__item
+{
+    margin-left: 52px;
+}
+
+.g-head__icon
+{
+    position: absolute;
+    top: -4px;
+    left: -36px;
+
+    width: 27px;
+}
+
+.g-head__h-link
+{
+    font-size: 11px;
+    line-height: 17px;
+
+    position: relative;
+
+    opacity: .3;
+    color: #a0148e;
 }
 
 .s-title
