@@ -56,7 +56,7 @@
     background-color: transparent; 
     color: $col-pink;
     font-weight: bold;
-    padding: 10px 30px 10px 20px;
+    padding: 10px 50px 10px 0px;
     border: none;
     font-size: 15px;
     outline: none;
@@ -73,21 +73,24 @@
     }
     &::before {
       top: 18px;
-      right: 14px;
+      right: 36px;
       transform: rotate(45deg);
     }
     &::after {
       top: 18px;
-      right: 9px;
+      right: 31px;
       transform: rotate(-45deg);
     }
     &--open {
+      padding: 10px 30px 10px 20px;
       background-color: $col-white;
       &::before {       
         transform: rotate(-45deg);
+        right: 14px;
       }
       &::after {
         transform: rotate(45deg);
+        right: 9px;
       }
     }
   }
