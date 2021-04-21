@@ -41,7 +41,7 @@
     @include media-down(md) {    
       position: absolute;
       right: 0;
-      top: 47px;
+      top: 66px;
     }
   }
   &__soci {
@@ -212,7 +212,7 @@
   }
   &__logo {  
     @include media-down(md) {    
-      margin-bottom: 12px;
+      margin: 12px 0;
       order: 2;      
     }
   }

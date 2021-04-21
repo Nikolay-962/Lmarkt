@@ -55,7 +55,7 @@ catalogBtn.addEventListener('click', () => {
 });
 
 openList.addEventListener('click', () => {
-  let widthScreen = document.querySelector('.header').offsetWidth;
+  //let widthScreen = document.querySelector('.header').offsetWidth;
   if (catalogSubList.classList.contains('open')) {
     catalogSubList.classList.remove('open');
     catalogSubListTwo.classList.remove('open');
@@ -138,4 +138,4 @@ for (let footerNav of footerNavs) {
   })
 }
 
-// попап "Войти в профиль"servis__item--menu
+// Увеличивает гитару
