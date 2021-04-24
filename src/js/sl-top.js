@@ -104,7 +104,7 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     centerMode: true,
     variableWidth: true,
     initialSlide: 1,

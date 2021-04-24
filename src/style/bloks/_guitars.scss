@@ -111,6 +111,7 @@
 }
 .data {
   &__wrap {
+    overflow: hidden;
     display: grid;
     grid-template-columns: 80px 1fr 1fr 1fr;
     grid-column-gap: 20px;
@@ -149,19 +150,18 @@
    
   }
   &__info {
-    grid-area: in;
-   
+    grid-area: in; 
   }
   &__d-color {
     grid-area: col;
   }
 }
 .preview {
-  overflow: hidden;
   &__list {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     row-gap: 6px;
+    overflow: hidden;
     @include media-down(md) { 
       @include flex($j-sb, $a-center);
       margin-bottom: 30px;
@@ -171,6 +171,7 @@
   &__item { 
     position: relative; 
     border-radius: 3px;
+    overflow: hidden;
     &::before {
       display: none;
       position: absolute;
@@ -186,24 +187,29 @@
         display: block;
       }
     }
+    &--active {
+      border: 2px solid rgba(160, 20, 142, 1);
+      border-radius: 6px;
+    }
   }
   &__img {
-    object-fit: cover;
-    height: 106px;
+    object-fit: contain;
+    height: 102px;
     @include media-down(md) {
       height: 168px; 
     }
   }
 }
+
+
 .primary {
-  position: relative;
   &__img-big {
     display: none;
     position: absolute;
-    top: -230px;
-    left: 30%;    
+    top: -27px;
+    left: 20%;    
     width: 713px;
-    z-index: 6;
+    z-index: 7;
     border-radius: 5px;
   }
 }
@@ -245,6 +251,10 @@
       @include flex($j-sb, $a-center);
       margin: 10px 0; 
     }
+    @include media-down(sm) { 
+      @include flex($j-fs, $a-center);
+      margin: 10px 0; 
+    }
   }
   &__summ {
     font-weight: bold;
@@ -255,21 +265,26 @@
     @include media-down(md) {
       flex-basis: 50%;
       border: 1px solid #F1DAEE;
-      font-size: 20px;
-      margin-right: 100px;
+      font-size: 20px;     
       margin-bottom: 0;
-      padding: 10px;
+      padding: 9px;
+      margin-right: 100px;
+      display: none;
     }
     @include media-down(sm) { 
       font-size: 13px;
-      margin-right: 8px; 
+      margin-right: 8px;      
+      flex-basis: 30%;
     }
   }
-  &__btn {
+  &__icon {
+    margin-right: 10px;
+  }
+  &__btn {  
     background-color: #A0148E;
     color: #fff;
     padding: 14px;
-     width: 210px;
+    width: 210px;
     font-weight: bold;
     font-size: 22px;
     line-height: 33px;
@@ -279,10 +294,13 @@
     @include media-down(md) { 
       font-size: 20px;
       flex-basis: 50%;
+      display: none;   
     }
     @include media-down(sm) { 
       font-size: 13px;
-      margin-right: 8px; 
+      margin-right: 8px;
+      flex-basis: 30%;
+    
     }
   }
 }
@@ -329,11 +347,18 @@
 }
 .d-color {
   align-self: flex-end;
+  &__title {
+    @include media-down(sm) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
   &__list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     margin-left: -14px;
+    overflow: hidden;
     @include media-down(md) {
      margin-top: 16px;
     }
@@ -341,6 +366,10 @@
   &__item {
     margin-left: 14px;
     overflow: hidden;
+    &--active {
+      border: 2px solid rgba(160, 20, 142, 1);
+      border-radius: 6px;
+    }
   }
   &__img {
     object-fit: cover;
@@ -350,6 +379,7 @@
   }
 }
 .description {
+  position: relative;
   &__list {
     @include flex($j-fs, $a-center);
     margin: 67px 0 47px;
@@ -368,6 +398,9 @@
         bottom: -10px;
       }
     }
+    @include media-down(sm) {
+       flex-basis: 33.3333%;
+     }
   }
   &__link {
     position: relative;
@@ -376,9 +409,17 @@
     line-height: 33px;    
     color: #2D0027;   
     opacity: 0.5;
+    &--active {
+      opacity: 1; 
+    }
     &:hover {
       color: $col-hov;
     }
+    @include media-down(md) {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 20px;
+     }
   }
   &__span {
     position: absolute;
@@ -397,11 +438,13 @@
     
   }
   &__text {
-    margin: 0;
+    position: relative;
     font-size: 15px;
     line-height: 28px;
     color: #2D0027;
     opacity: 0.5;
+    @include media-down(md) {
+     position: relative;
+     }
   }
 }
-

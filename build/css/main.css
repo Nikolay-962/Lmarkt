@@ -1196,6 +1196,14 @@ body
     fill: none;
 }
 
+.s-icon--backet
+{
+    width: 37px;
+    height: 30px;
+
+    stroke: #fff;
+}
+
 .profile-form
 {
     position: relative;
@@ -1824,6 +1832,7 @@ body
 .data__wrap
 {
     display: grid;
+    overflow: hidden;
 
     grid-template-columns: 80px 1fr 1fr 1fr;
     grid-column-gap: 20px;
@@ -1862,14 +1871,10 @@ body
     grid-area: col;
 }
 
-.preview
-{
-    overflow: hidden;
-}
-
 .preview__list
 {
     display: grid;
+    overflow: hidden;
 
     grid-template-rows: repeat(5, 1fr);
     row-gap: 6px;
@@ -1878,6 +1883,8 @@ body
 .preview__item
 {
     position: relative;
+
+    overflow: hidden;
 
     border-radius: 3px;
 }
@@ -1903,25 +1910,26 @@ body
     display: block;
 }
 
-.preview__img
+.preview__item--active
 {
-    height: 106px;
-
-    -o-object-fit: cover;
-       object-fit: cover;
+    border: 2px solid #a0148e;
+    border-radius: 6px;
 }
 
-.primary
+.preview__img
 {
-    position: relative;
+    height: 102px;
+
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .primary__img-big
 {
     position: absolute;
-    z-index: 6;
-    top: -230px;
-    left: 30%;
+    z-index: 7;
+    top: -27px;
+    left: 20%;
 
     display: none;
 
@@ -1985,6 +1993,11 @@ body
     margin-bottom: 20px;
 
     text-align: center;
+}
+
+.d-price__icon
+{
+    margin-right: 10px;
 }
 
 .d-price__btn
@@ -2067,6 +2080,7 @@ body
 .d-color__list
 {
     display: flex;
+    overflow: hidden;
 
     margin-left: -14px;
 
@@ -2081,6 +2095,12 @@ body
     margin-left: 14px;
 }
 
+.d-color__item--active
+{
+    border: 2px solid #a0148e;
+    border-radius: 6px;
+}
+
 .d-color__img
 {
     width: 61px;
@@ -2088,6 +2108,11 @@ body
 
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+.description
+{
+    position: relative;
 }
 
 .description__list
@@ -2133,6 +2158,11 @@ body
     color: #2d0027;
 }
 
+.description__link--active
+{
+    opacity: 1;
+}
+
 .description__link:hover
 {
     color: #d866c9;
@@ -2165,7 +2195,7 @@ body
     font-size: 15px;
     line-height: 28px;
 
-    margin: 0;
+    position: relative;
 
     opacity: .5;
     color: #2d0027;
@@ -2637,6 +2667,11 @@ body
     background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #fff9fe 69.27%);
 }
 
+.rectangle--cassio
+{
+    display: none;
+}
+
 .bottom-arrow
 {
     font-size: 15px;
@@ -2706,6 +2741,11 @@ body
     right: 2px;
 
     transform: rotate(45deg);
+}
+
+.bottom-arrow--cassio
+{
+    display: none;
 }
 
 .tools-slider
@@ -3625,9 +3665,11 @@ body
     {
         font-size: 20px;
 
+        display: none;
+
         margin-right: 100px;
         margin-bottom: 0;
-        padding: 10px;
+        padding: 9px;
 
         border: 1px solid #f1daee;
 
@@ -3637,6 +3679,8 @@ body
     .d-price__btn
     {
         font-size: 20px;
+
+        display: none;
 
         flex-basis: 50%;
     }
@@ -3649,6 +3693,18 @@ body
     .d-color__list
     {
         margin-top: 16px;
+    }
+
+    .description__link
+    {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .description__text
+    {
+        position: relative;
     }
 
     .pop-categories__title
@@ -3674,6 +3730,43 @@ body
         margin-bottom: 28px;
 
         text-align: center;
+    }
+
+    .rectangle--cassio
+    {
+        top: 0;
+
+        display: block;
+    }
+
+    .bottom-arrow--cassio
+    {
+        font-size: 12px;
+
+        top: 50%;
+        left: 46%;
+
+        display: block;
+
+        transform: translateX(-50%);
+    }
+
+    .bottom-arrow--cassio::after
+    {
+        top: 10px;
+        right: -54px;
+
+        width: 10px;
+        height: 2px;
+    }
+
+    .bottom-arrow--cassio::before
+    {
+        top: 10px;
+        right: -60px;
+
+        width: 10px;
+        height: 2px;
     }
 
     .cost
@@ -3722,6 +3815,12 @@ body
     {
         -moz-columns: auto 1;
              columns: auto 1;
+    }
+
+    .s-icon--backet
+    {
+        width: 15px;
+        height: 13px;
     }
 
     .profile-form__wrap
@@ -3791,11 +3890,23 @@ body
         line-height: 22px;
     }
 
+    .d-price__wrap
+    {
+        display: flex;
+
+        margin: 10px 0;
+
+        justify-content: flex-start;
+        align-items: center;
+    }
+
     .d-price__summ
     {
         font-size: 13px;
 
         margin-right: 8px;
+
+        flex-basis: 30%;
     }
 
     .d-price__btn
@@ -3803,6 +3914,19 @@ body
         font-size: 13px;
 
         margin-right: 8px;
+
+        flex-basis: 30%;
+    }
+
+    .d-color__title
+    {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .description__item
+    {
+        flex-basis: 33.3333%;
     }
 
     .s-title

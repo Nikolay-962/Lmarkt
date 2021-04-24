@@ -877,6 +877,15 @@
   height: 20px;
   stroke: $col-pink;
   fill: none;
+  &--backet {
+    stroke: #fff;
+    width: 37px;
+    height: 30px;
+    @include media-down(sm) { 
+      width: 15px;
+      height: 13px;
+    }
+  }
 }
 .profile-form {
   position: relative;
