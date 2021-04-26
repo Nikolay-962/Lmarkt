@@ -10,22 +10,30 @@
   }
 }
 .anons {  
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 16px;
     position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 10px;
-      right: -8px;
-      background-color: rgba(46, 0, 40, .3);
-      top: 8px;
-      transform: rotate(20deg);
-      @include media-down(md) {    
-        display: none;
+    &--slesh {
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 10px;        
+        background-color: rgba(46, 0, 40, .3);
+        top: 8px;
+        transform: rotate(20deg);
+        @include media-down(md) {    
+          display: none;
+        }
       }
-    }
+      &::before {
+        left: -8px;
+      }
+      &::after {
+        right: -8px;
+      }
+    }   
   }
   &__link {
     font-size: 13px;

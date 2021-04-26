@@ -1,23 +1,40 @@
 {% extends "templates/default.html" %}
-{% set title = "showing"%}
+{% set title = "classic"%}
 {% block content %}
 
-<body id="showing">
+<body id="classic">
   <div class="page">
     <div class="substrate"></div>
     <div class="container">
       {% include "includes/header.html" %}
       <main class="main">
         <div class="main__wrap">
-          <section class="main__guitars">
-            {% include "includes/guitars.html" %}
-          </section>
-          <section class="main__pop-goods">
-            <h2 class="pop-goods__title s-title">
-              Вместе с этим товаром покупают
+          <div class="main-head">
+            <ul class="main-head__anons anons">
+              <li class="anons__item">
+                <a href="./index.html" class="anons__link">Главная</a>
+              </li>
+              <li class="anons__item">
+                <a href="./showing.html" class="anons__link">Классические гитары</a>
+              </li>
+              <li class="anons__item anons__item--back">
+                <a href="./index.html" class="anons__link anons__link anons__link--back">Вернуться назад</a>
+              </li>
+            </ul>
+            <h2 class="main-head__title">
+              Классические гитары
             </h2>
-            {% include "includes/pop-goods.html" %}
-          </section>
+          </div>
+          <div class="classic-guitar">
+            <div class="classic-guitar__wrap">
+              <aside class="classic-guitar__aside">
+                {% include "includes/aside.html" %}
+              </aside>
+              <div class="classic-guitar__main">
+                {% include "includes/guitar-cards.html" %}
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       {% include "includes/footer.html" %}
@@ -111,7 +128,6 @@
   <script src="js/sl-top.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/profile.js"></script>
-  <script src="js/showing.js"></script>
-  <script src="js/slid-showing.js"></script>
+  <script src="js/main.js"></script>
 </body>
 {% endblock %}

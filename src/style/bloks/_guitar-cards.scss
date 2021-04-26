@@ -1,0 +1,53 @@
+.sort {
+  font-size: 13px;
+  line-height: 18px;
+  color: #2D0027;
+  &__btn {
+    cursor: pointer;
+    margin-left: 16px;
+    border: none;
+    color: #A0148E;
+    background-color: #fff;
+    &--pop {
+      position: relative;
+      color: #2D0027;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 1px;
+        background-color: #000;
+        z-index: 6;
+      }
+      &::after {
+        transform: rotate(45deg);
+        right: -5px;
+        top: 3px;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        right: -2px;
+        top: 3px;
+      }
+    }
+    &--price {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 12px;
+        background-color: #000;
+        z-index: 6;
+        left: -18px;
+        top: 2px;
+      }
+    }
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 26px;
+  }
+}
