@@ -42,16 +42,19 @@ const showText = document.querySelector('.description__text');
 const showTextButton = document.querySelector('.bottom-arrow--cassio');
 showTextButton.addEventListener('click', () => {
   const rectangle = document.querySelector('.rectangle');
+  const sliderMargin = document.querySelector('.main__pop-goods');
   if (rectangle.classList.contains('active')) {
     rectangle.classList.remove('active');
     showTextButton.classList.remove('bottom-arrow--open');
     rectangle.style.top = '100%';
     showTextButton.textContent = 'Свернуть';
+    sliderMargin.classList.remove('up');
   } else {
     rectangle.classList.add('active');
     showTextButton.classList.add('bottom-arrow--open');
     rectangle.style.top = '0%';
     showTextButton.textContent = 'Подробнее';
+    sliderMargin.classList.add('up');
   }
 })
 

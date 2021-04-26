@@ -1871,13 +1871,20 @@ body
     grid-area: col;
 }
 
+.preview
+{
+    position: relative;
+}
+
 .preview__list
 {
+    position: absolute;
+
     display: grid;
     overflow: hidden;
 
     grid-template-rows: repeat(5, 1fr);
-    row-gap: 6px;
+    row-gap: 20px;
 }
 
 .preview__item
@@ -1922,6 +1929,73 @@ body
 
     -o-object-fit: contain;
        object-fit: contain;
+}
+
+.preview__btn
+{
+    position: absolute;
+
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #fff9fe 69.27%);
+}
+
+.preview__btn::before,
+.preview__btn::after
+{
+    position: absolute;
+
+    width: 18px;
+    height: 3px;
+
+    content: '';
+    cursor: pointer;
+
+    background-color: #a0148e;
+}
+
+.preview__btn--next
+{
+    bottom: 0;
+}
+
+.preview__btn--next::before
+{
+    right: 35px;
+    bottom: 6px;
+
+    transform: rotate(45deg);
+}
+
+.preview__btn--next::after
+{
+    right: 23px;
+    bottom: 6px;
+
+    transform: rotate(-45deg);
+}
+
+.preview__btn--prev
+{
+    top: 0;
+}
+
+.preview__btn--prev::before
+{
+    top: 6px;
+    right: 35px;
+
+    transform: rotate(-45deg);
+}
+
+.preview__btn--prev::after
+{
+    top: 6px;
+    right: 23px;
+
+    transform: rotate(45deg);
 }
 
 .primary__img-big
@@ -2132,10 +2206,26 @@ body
     margin-right: 66px;
 }
 
-.description__item--active::before
+.description__link
+{
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 33px;
+
+    display: flex;
+
+    opacity: .5;
+    color: #2d0027;
+
+    align-items: center;
+}
+
+.description__link::before
 {
     position: absolute;
     bottom: -10px;
+
+    display: none;
 
     width: 100%;
     height: 2px;
@@ -2143,24 +2233,7 @@ body
     content: '';
 
     opacity: 1;
-    background-color: #2d0027;
-}
-
-.description__link
-{
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 33px;
-
-    position: relative;
-
-    opacity: .5;
-    color: #2d0027;
-}
-
-.description__link--active
-{
-    opacity: 1;
+    background-color: #d866c9;
 }
 
 .description__link:hover
@@ -2168,26 +2241,47 @@ body
     color: #d866c9;
 }
 
+.description__link:hover::before
+{
+    display: block;
+}
+
+.description__link--active
+{
+    opacity: 1;
+    color: #2d0027;
+}
+
+.description__link--active::before
+{
+    display: block;
+
+    opacity: 1;
+    background-color: #2d0027;
+}
+
 .description__span
 {
     font-size: 15px;
-
-    position: absolute;
-    top: 2px;
-    right: -30px;
 
     display: flex;
 
     width: 26px;
     height: 26px;
+    margin-left: 8px;
 
     opacity: .5;
     color: #2d0027;
-    border: 1px solid;
+    border: 1px solid rgba(45, 0, 39, .5);
     border-radius: 50%;
 
     justify-content: center;
     align-items: center;
+}
+
+.description__span:hover
+{
+    color: #d866c9;
 }
 
 .description__text
@@ -2199,6 +2293,76 @@ body
 
     opacity: .5;
     color: #2d0027;
+}
+
+.reviews
+{
+    font-size: 15px;
+
+    display: none;
+}
+
+.reviews__item
+{
+    margin: 42px 0;
+}
+
+.reviews__time
+{
+    margin: 14px 0;
+
+    color: rgba(45, 0, 39, .5);
+}
+
+.reviews__text
+{
+    color: #2d0027;
+}
+
+.comment
+{
+    font-size: 15px;
+
+    display: none;
+}
+
+.comment__item
+{
+    margin: 42px 0;
+}
+
+.comment__item--answer
+{
+    margin-left: 60px;
+}
+
+.comment__time
+{
+    margin: 14px 0;
+
+    color: rgba(45, 0, 39, .5);
+}
+
+.comment__text
+{
+    color: #2d0027;
+}
+
+.comment__link
+{
+    color: #a0148e;
+}
+
+.btn
+{
+    font-size: 15px;
+
+    padding: 10px 28px;
+
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background: #a0148e;
 }
 
 .s-title
@@ -3166,6 +3330,14 @@ body
     align-self: center;
 }
 
+.up
+{
+    position: relative;
+    z-index: 9;
+
+    margin-top: -100px;
+}
+
 .footer__wrap
 {
     margin-top: 80px;
@@ -3704,6 +3876,9 @@ body
 
     .description__text
     {
+        font-size: 12px;
+        line-height: 20px;
+
         position: relative;
     }
 
@@ -3743,7 +3918,7 @@ body
     {
         font-size: 12px;
 
-        top: 50%;
+        top: 66%;
         left: 46%;
 
         display: block;
@@ -3926,6 +4101,8 @@ body
 
     .description__item
     {
+        margin: 0;
+
         flex-basis: 33.3333%;
     }
 

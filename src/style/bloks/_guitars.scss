@@ -157,10 +157,12 @@
   }
 }
 .preview {
+  position: relative;
   &__list {
+    position: absolute;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    row-gap: 6px;
+    row-gap: 20px;
     overflow: hidden;
     @include media-down(md) { 
       @include flex($j-sb, $a-center);
@@ -199,9 +201,50 @@
       height: 168px; 
     }
   }
+  &__btn {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    border: none;
+    background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #fff9fe 69.27%);
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 3px;
+      background-color: #A0148E;
+      cursor: pointer;
+    }
+    &--next {
+      bottom: 0;
+      &::before {
+        bottom: 6px;
+        right: 35px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        bottom: 6px;
+        right: 23px;
+        transform: rotate(-45deg);
+      }
+    }
+    &--prev {
+      top: 0;
+      
+      &::before {
+        top: 6px;
+        right: 35px;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        top: 6px;
+        right: 23px;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
-
-
 .primary {
   &__img-big {
     display: none;
@@ -299,8 +342,7 @@
     @include media-down(sm) { 
       font-size: 13px;
       margin-right: 8px;
-      flex-basis: 30%;
-    
+      flex-basis: 30%;   
     }
   }
 }
@@ -374,8 +416,7 @@
   &__img {
     object-fit: cover;
     width: 61px;
-    height: 81px;
-    
+    height: 81px;   
   }
 }
 .description {
@@ -386,34 +427,44 @@
   }
   &__item {
     position: relative;
-    margin-right: 66px;
-    &--active {
-      &::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: #2D0027;
-        opacity: 1;
-        bottom: -10px;
-      }
-    }
+    margin-right: 66px; 
     @include media-down(sm) {
        flex-basis: 33.3333%;
+       margin: 0;
      }
   }
   &__link {
-    position: relative;
+    display: flex;
+    align-items: center;
     font-weight: bold;
     font-size: 22px;
     line-height: 33px;    
     color: #2D0027;   
     opacity: 0.5;
-    &--active {
-      opacity: 1; 
-    }
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $col-hov;
+      opacity: 1;
+      bottom: -10px;
+    } 
     &:hover {
       color: $col-hov;
+      &::before {
+        display: block;
+      }
+    }
+    &--active {
+      color: #2D0027;
+      opacity: 1; 
+      &::before {
+        display: block;
+        background-color:  #2D0027;
+        opacity: 1; 
+      }
     }
     @include media-down(md) {
       font-weight: bold;
@@ -421,21 +472,21 @@
       line-height: 20px;
      }
   }
-  &__span {
-    position: absolute;
+  &__span { 
     width: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    right: -30px;
-    top: 2px;
     height: 26px;    
-    border: 1px solid;
+    border: 1px solid rgba(45, 0, 39, .5);
     color: #2D0027;
     opacity: 0.5;
     border-radius: 50%;
-    
+    margin-left: 8px;
+    &:hover {
+      color: $col-hov;
+    }   
   }
   &__text {
     position: relative;
@@ -445,6 +496,50 @@
     opacity: 0.5;
     @include media-down(md) {
      position: relative;
+     font-size: 12px;
+    line-height: 20px;
      }
   }
+}
+.reviews {
+  display: none;
+  font-size: 15px;
+  &__item {
+    margin: 42px 0;
+  }
+  &__time {
+    color: rgba(45, 0, 39, .5);
+    margin: 14px 0;
+  }
+  &__text {
+    color: rgba(45, 0, 39, 1);
+  }
+}
+.comment {
+  display: none;
+  font-size: 15px;
+  &__item {
+    margin: 42px 0;
+    &--answer {
+      margin-left: 60px;
+    }
+  }
+  &__time {
+    color: rgba(45, 0, 39, .5);
+    margin: 14px 0;
+  }
+  &__text {
+    color: rgba(45, 0, 39, 1);
+  }
+  &__link {
+    color: #A0148E;
+  }
+}
+.btn {
+  background: #A0148E;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 28px;
+  border: none;
 }
