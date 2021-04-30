@@ -132,14 +132,10 @@
             {src:'img/preview-2.jpg', alt: 'Гитара'},
             ] %}
             <ul class="d-color__list">
-              <!--<li class="d-color__item d-color__item--active">
-                <img src="img/preview-1.jpg" alt="" class="d-color__img">
-              </li>-->
               {% for colorItem in colorList %}
               <li class="d-color__item">
                 <img src="{{ colorItem.src }}" alt="{{ colorItem.alt }}" class="d-color__img">
               </li>
-
               {% endfor %}
             </ul>
           </div>
