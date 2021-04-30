@@ -93,9 +93,9 @@
   position: relative;
   &__s-content {
     position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
+    top: 14%;
+    left: 10.1%;
+    
     z-index: 5;   
     @include media-down(md) {    
       top: 50%;
@@ -168,7 +168,7 @@
     text-align: center;      
   }
   &__span {
-    font-size: 2.3em;
+    font-size: 61px;
     @include media-down(md) {    
       font-size: 1.2em;
       line-height: 10px;         

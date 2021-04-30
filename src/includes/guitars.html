@@ -43,28 +43,25 @@
       <div class="data">
         <div class="data__wrap">
           <div class="data__preview preview">
-            <button class="preview__btn preview__btn--prev"></button>
-            <div class="preview__list">
-              <div class="preview__item preview__item--active">
-                <img src="img/preview-1.jpg" alt="Гитара" class="preview__img">
+            <div class="preview__wrap">
+              <button class="preview__btn preview__btn--prev"></button>
+              {% set previewList = [
+              {src:'img/preview-1.jpg', alt: 'Гитара'},
+              {src:'img/preview-2.jpg', alt: 'Гитара'},
+              {src:'img/preview-9.jpg', alt: 'Гитара'},
+              {src:'img/preview-4.jpg', alt: 'Гитара'},
+              {src:'img/preview-8.jpg', alt: 'Гитара'},
+              {src:'img/preview-2.jpg', alt: 'Гитара'},
+              ] %}
+              <div class="preview__list">
+                {% for previewItem in previewList %}
+                <div class="preview__item">
+                  <img src="{{ previewItem.src }}" alt="{{ previewItem.alt }}" class="preview__img">
+                </div>
+                {% endfor %}
               </div>
-              <div class="preview__item">
-                <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-9.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-4.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-8.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
-              </div>
+              <button class="preview__btn preview__btn--next"></button>
             </div>
-            <button class="preview__btn preview__btn--next"></button>
           </div>
           <div class="data__primary primary">
             <div class="primary__cover" id="small">
@@ -73,47 +70,27 @@
             </div>
           </div>
           <div class="data__specification specification">
+            {% set specificationList = [
+            {dt: "Производитель", dd: "Godin"},
+            {dt: "Количество струн", dd: "6"},
+            {dt: " Цвет:", dd: "Натуральный"},
+            {dt: "Артикул:", dd: "012817"},
+            {dt: "Ставки налогов", dd: "20"},
+            {dt: " Верхняя дека:", dd: "Массив кедра"},
+            {dt: "Объем, м ", dd: "0.12"},
+            {dt: "Топ 20", dd: "false"},
+            {dt: "Ширина грифа:", dd: "50мм"},
+            ] %}
             <div class="specification__wrap">
               <h3 class="specification__title">
                 Характеристики
               </h3>
-              <div class="specification__item">
-                <div class="specification__span">Производитель:</div>
-                <div class="specification__span specification__span--fact">Godin</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Количество </div>
-                <div class="specification__span specification__span--fact">6</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Цвет:</div>
-                <div class="specification__span specification__span--fact"> Натуральный</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Артикул:</div>
-                <div class="specification__span specification__span--fact">012817</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Ставки налогов:</div>
-                <div class="specification__span specification__span--fact">20</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Верхняя дека:</div>
-                <div class="specification__span specification__span--fact">Массив кедра
-                </div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Объем, м :</div>
-                <div class="specification__span specification__span--fact">0.12</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Топ 20:</div>
-                <div class="specification__span specification__span--fact">False</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Ширина грифа:</div>
-                <div class="specification__span specification__span--fact">50мм</div>
-              </div>
+              {% for specificationItem in specificationList %}
+              <dl class="specification__item">
+                <dt class="specification__span">{{ specificationItem.dt }}</dt>
+                <dd class="specification__span specification__span--fact">{{ specificationItem.dd }}</dd>
+              </dl>
+              {% endfor %}
             </div>
           </div>
           <div class="data__price d-price">
@@ -146,25 +123,24 @@
             <h3 class="d-color__title">
               Выбор цвета
             </h3>
+            {% set colorList = [
+            {src:'img/preview-1.jpg', alt: 'Гитара'},
+            {src:'img/preview-2.jpg', alt: 'Гитара'},
+            {src:'img/preview-9.jpg', alt: 'Гитара'},
+            {src:'img/preview-4.jpg', alt: 'Гитара'},
+            {src:'img/preview-8.jpg', alt: 'Гитара'},
+            {src:'img/preview-2.jpg', alt: 'Гитара'},
+            ] %}
             <ul class="d-color__list">
-              <li class="d-color__item d-color__item--active">
+              <!--<li class="d-color__item d-color__item--active">
                 <img src="img/preview-1.jpg" alt="" class="d-color__img">
-              </li>
+              </li>-->
+              {% for colorItem in colorList %}
               <li class="d-color__item">
-                <img src="img/preview-2.jpg" alt="" class="d-color__img">
+                <img src="{{ colorItem.src }}" alt="{{ colorItem.alt }}" class="d-color__img">
               </li>
-              <li class="d-color__item">
-                <img src="img/preview-8.jpg" alt="" class="d-color__img">
-              </li>
-              <li class="d-color__item">
-                <img src="img/preview-2.jpg" alt="" class="d-color__img">
-              </li>
-              <li class="d-color__item">
-                <img src="img/preview-5.jpg" alt="" class="d-color__img">
-              </li>
-              <li class="d-color__item">
-                <img src="img/preview-4.jpg" alt="" class="d-color__img">
-              </li>
+
+              {% endfor %}
             </ul>
           </div>
         </div>

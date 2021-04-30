@@ -11,6 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="css/main.scss" type="text/scss">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -958,28 +960,38 @@
       <div class="data">
         <div class="data__wrap">
           <div class="data__preview preview">
-            <button class="preview__btn preview__btn--prev"></button>
-            <div class="preview__list">
-              <div class="preview__item preview__item--active">
-                <img src="img/preview-1.jpg" alt="Гитара" class="preview__img">
+            <div class="preview__wrap">
+              <button class="preview__btn preview__btn--prev"></button>
+              
+              <div class="preview__list">
+                
+                <div class="preview__item">
+                  <img src="img/preview-1.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
+                <div class="preview__item">
+                  <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
+                <div class="preview__item">
+                  <img src="img/preview-9.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
+                <div class="preview__item">
+                  <img src="img/preview-4.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
+                <div class="preview__item">
+                  <img src="img/preview-8.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
+                <div class="preview__item">
+                  <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
+                </div>
+                
               </div>
-              <div class="preview__item">
-                <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-9.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-4.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-8.jpg" alt="Гитара" class="preview__img">
-              </div>
-              <div class="preview__item">
-                <img src="img/preview-2.jpg" alt="Гитара" class="preview__img">
-              </div>
+              <button class="preview__btn preview__btn--next"></button>
             </div>
-            <button class="preview__btn preview__btn--next"></button>
           </div>
           <div class="data__primary primary">
             <div class="primary__cover" id="small">
@@ -988,47 +1000,57 @@
             </div>
           </div>
           <div class="data__specification specification">
+            
             <div class="specification__wrap">
               <h3 class="specification__title">
                 Характеристики
               </h3>
-              <div class="specification__item">
-                <div class="specification__span">Производитель:</div>
-                <div class="specification__span specification__span--fact">Godin</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Количество </div>
-                <div class="specification__span specification__span--fact">6</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Цвет:</div>
-                <div class="specification__span specification__span--fact"> Натуральный</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Артикул:</div>
-                <div class="specification__span specification__span--fact">012817</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Ставки налогов:</div>
-                <div class="specification__span specification__span--fact">20</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Верхняя дека:</div>
-                <div class="specification__span specification__span--fact">Массив кедра
-                </div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Объем, м :</div>
-                <div class="specification__span specification__span--fact">0.12</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Топ 20:</div>
-                <div class="specification__span specification__span--fact">False</div>
-              </div>
-              <div class="specification__item">
-                <div class="specification__span">Ширина грифа:</div>
-                <div class="specification__span specification__span--fact">50мм</div>
-              </div>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Производитель</dt>
+                <dd class="specification__span specification__span--fact">Godin</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Количество струн</dt>
+                <dd class="specification__span specification__span--fact">6</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span"> Цвет:</dt>
+                <dd class="specification__span specification__span--fact">Натуральный</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Артикул:</dt>
+                <dd class="specification__span specification__span--fact">012817</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Ставки налогов</dt>
+                <dd class="specification__span specification__span--fact">20</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span"> Верхняя дека:</dt>
+                <dd class="specification__span specification__span--fact">Массив кедра</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Объем, м </dt>
+                <dd class="specification__span specification__span--fact">0.12</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Топ 20</dt>
+                <dd class="specification__span specification__span--fact">false</dd>
+              </dl>
+              
+              <dl class="specification__item">
+                <dt class="specification__span">Ширина грифа:</dt>
+                <dd class="specification__span specification__span--fact">50мм</dd>
+              </dl>
+              
             </div>
           </div>
           <div class="data__price d-price">
@@ -1061,25 +1083,42 @@
             <h3 class="d-color__title">
               Выбор цвета
             </h3>
+            
             <ul class="d-color__list">
-              <li class="d-color__item d-color__item--active">
+              <!--<li class="d-color__item d-color__item--active">
                 <img src="img/preview-1.jpg" alt="" class="d-color__img">
-              </li>
+              </li>-->
+              
               <li class="d-color__item">
-                <img src="img/preview-2.jpg" alt="" class="d-color__img">
+                <img src="img/preview-1.jpg" alt="Гитара" class="d-color__img">
               </li>
+
+              
               <li class="d-color__item">
-                <img src="img/preview-8.jpg" alt="" class="d-color__img">
+                <img src="img/preview-2.jpg" alt="Гитара" class="d-color__img">
               </li>
+
+              
               <li class="d-color__item">
-                <img src="img/preview-2.jpg" alt="" class="d-color__img">
+                <img src="img/preview-9.jpg" alt="Гитара" class="d-color__img">
               </li>
+
+              
               <li class="d-color__item">
-                <img src="img/preview-5.jpg" alt="" class="d-color__img">
+                <img src="img/preview-4.jpg" alt="Гитара" class="d-color__img">
               </li>
+
+              
               <li class="d-color__item">
-                <img src="img/preview-4.jpg" alt="" class="d-color__img">
+                <img src="img/preview-8.jpg" alt="Гитара" class="d-color__img">
               </li>
+
+              
+              <li class="d-color__item">
+                <img src="img/preview-2.jpg" alt="Гитара" class="d-color__img">
+              </li>
+
+              
             </ul>
           </div>
         </div>
