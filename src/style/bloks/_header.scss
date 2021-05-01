@@ -42,7 +42,7 @@
     @include media-down(md) {    
       position: absolute;
       right: 0;
-      top: 60px;
+      top: 54px;
     }
   }
   &__soci {
@@ -330,6 +330,7 @@
   }
   &__list {
     position: relative;
+    margin-right: 20px;
   }
   &__sub-list {
     position: absolute;
@@ -478,7 +479,7 @@
   height: 0;
   overflow: hidden;
 }
-.anons {
+.c-anons {
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -747,8 +748,7 @@
 }
 .phone {
   &__link {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 22px;
     color: #2D0027;
     font-weight: bold;
     &--foot {
@@ -760,7 +760,7 @@
       opacity: 0.5;
       font-weight: bold;
       font-size: 18px;
-      line-height: 27px;
+      ///line-height: 27px;
       &:hover {
         opacity: 1;
       }
@@ -861,9 +861,7 @@
     border-radius: 3px;
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    width: 100%;
     object-fit: cover;
     display: block;
   }

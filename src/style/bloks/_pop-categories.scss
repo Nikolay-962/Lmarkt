@@ -122,10 +122,10 @@
       font-size: 22px;
       letter-spacing: 1.4px;
     }
-  }
- 
+  } 
   &__cover { 
-     position: relative;     
+     position: relative;
+     padding-top: 74%;     
     &::before {
       content: "";
       position: absolute;
@@ -135,12 +135,11 @@
       right: 0;
       background: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, rgba(82, 0, 71, 0.85) 67.19%);
       opacity: 0.5;
-      z-index: 10;
-      display: none;
+      z-index: 7;     
     }   
     &:hover {
       &::before {
-        display: block;
+       z-index: 5;
       }      
     }
     @include media-down(sm) {    
@@ -148,10 +147,9 @@
     }
   }
   &__img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
   &__link {
     display: block;

@@ -452,6 +452,8 @@ body
 .catalog__list
 {
     position: relative;
+
+    margin-right: 20px;
 }
 
 .catalog__sub-list
@@ -662,7 +664,7 @@ body
     transition: ease .5s;
 }
 
-.anons__wrap
+.c-anons__wrap
 {
     display: flex;
     flex-direction: column;
@@ -673,17 +675,17 @@ body
     align-items: center;
 }
 
-.anons__wrap--ins
+.c-anons__wrap--ins
 {
     height: 97%;
 }
 
-.anons__wrap--center
+.c-anons__wrap--center
 {
     height: 97%;
 }
 
-.anons__name
+.c-anons__name
 {
     font-size: 36px;
     font-weight: bold;
@@ -694,7 +696,7 @@ body
     color: #fff;
 }
 
-.anons__name--center
+.c-anons__name--center
 {
     font-size: 64px;
     font-weight: bold;
@@ -1014,9 +1016,8 @@ body
 
 .phone__link
 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    line-height: 29px;
 
     color: #2d0027;
 }
@@ -1031,7 +1032,6 @@ body
 {
     font-size: 18px;
     font-weight: bold;
-    line-height: 27px;
 
     opacity: .5;
     color: #2d0027;
@@ -1168,11 +1168,10 @@ body
 {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
     display: block;
+
+    width: 100%;
 
     border-radius: 3px;
 
@@ -1619,14 +1618,12 @@ body
     display: block;
 }
 
-.visual__img
+.visual__picture
 {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
 
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
 }
 
 .s-content__title
@@ -2534,18 +2531,18 @@ body
 .p-visual__cover
 {
     position: relative;
+
+    padding-top: 74%;
 }
 
 .p-visual__cover::before
 {
     position: absolute;
-    z-index: 10;
+    z-index: 7;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
-    display: none;
 
     content: '';
 
@@ -2555,17 +2552,15 @@ body
 
 .p-visual__cover:hover::before
 {
-    display: block;
+    z-index: 5;
 }
 
 .p-visual__img
 {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    position: absolute;
+    top: 0;
 
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
 }
 
 .p-visual__link
@@ -3790,7 +3785,7 @@ body
     .h-top__region
     {
         position: absolute;
-        top: 60px;
+        top: 54px;
         right: 0;
     }
 
