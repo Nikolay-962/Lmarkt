@@ -1,19 +1,19 @@
 {% set cardList = [
 {src:'img/product1.png',
 text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
-{src:'img/product2.png',
+{src:'img/product2.png', small: 'img/product2.jpg',
 text:'1Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽'},
-{src:'img/product3.png',
+{src:'img/product3.png', small: 'img/product2.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-{ src:'img/product4.png',
+{ src:'img/product4.png',small: 'img/product1.jpg',
 text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
-{src:'img/product1.png',
+{src:'img/product1.png', small: 'img/product2.jpg',
 text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
-{src:'img/product2.png',
+{src:'img/product2.png', small: 'img/product1.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-{src:'img/product3.png',
+{src:'img/product3.png', small: 'img/product2.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-{ src:'img/product4.png',
+{ src:'img/product4.png', small: 'img/product1.jpg',
 text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'}
 ] %}
 <div class="pop-goods">
@@ -37,12 +37,15 @@ text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное'
             </div>
             <div class="p-card__visual">
               <div class="p-card__cover">
-                <img src="{{ cardItem.src }}" alt="{{ alt }}" class="p-card__img">
+                <picture>
+                  <source srcset="{{ cardItem.small }}" media="(max-width: 410px)">
+                  <img src="{{ cardItem.src }}" alt="{{ alt }}" class="p-card__img">
+                </picture>
               </div>
             </div>
             <div class="p-card__description">
               <a href="#" class="p-card__link">
-                <strong>{{ cardItem.text }}</strong>
+                {{ cardItem.text }}
               </a>
             </div>
             <div class="p-card__price p-price">

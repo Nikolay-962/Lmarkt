@@ -127,9 +127,7 @@
       margin-bottom: 28px;
     } 
   }
-  &__item {
-    margin-bottom: 10px;
-  }
+
   &__link {
     font-size: 15px;
     line-height: 23px;
@@ -168,6 +166,7 @@
     }
   }
   &__icon {
+    margin-top: 8px;
     width: 18px;
     height: 18px;
     fill: #2D0027;
@@ -316,7 +315,7 @@
     top: -11px;
     left: 0;  
     &--mobile {
-      top: -92px;
+      top: -114px;
       right: 0;
       display: block;
     } 

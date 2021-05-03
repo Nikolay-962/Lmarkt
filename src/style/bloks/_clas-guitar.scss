@@ -29,10 +29,14 @@
     grid-template-areas:
     'aside main' 
     ;
+    @include media-down(md) {    
+      grid-template-areas:
+    'main' 
+    ;
+    }
   }
   &__aside {
-    grid-area: 'aside';
-    grid-template-columns: 1fr;
+    grid-area: 'aside'; 
   }
   &__main {
     grid-area: 'main';

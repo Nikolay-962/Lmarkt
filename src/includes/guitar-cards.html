@@ -1,38 +1,40 @@
 <div class="guitar-cards">
   <div class="sort">
     <span class="sort__text">Сортировать по:</span>
-    <button class="sort__btn sort__btn--pop" id="popularity">Популярности</button>
+    <button class="sort__btn sort__btn--pop" id="popularity">Популярности <span class="sort__span"></span> </button>
     <button class="sort__btn sort__btn--price" id="prece">Цене</button>
     <button class="sort__btn" id="discount">Скидке</button>
   </div>
+  <button class="guitar-cards__btn">Параметры</button>
 
   {% set cardList = [
-  {src:'img/product-1.png',
-  text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
-  {src:'img/product-12.jpg',
-  text:'1Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽'},
-  {src:'img/product-10.jpg',
+  {src:'img/product-1.png', small: 'img/product1.jpg',
+  text:'011C Гитара классическая 4/4, Doff, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
+  {src:'img/product-12.jpg', small: 'img/product2.jpg',
+  text:'185-STAY 1100/02 Slim Стойка- колонна для ..., Doff', alt: 'гитара', prise:'15 980 ₽'},
+  {src:'img/product-10.jpg', small: 'img/product1.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
 
-  { src:'img/product-2.png',
+  { src:'img/product-2.png', small: 'img/product2.jpg',
   text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
-  {src:'img/product-3.png',
-  text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
-  {src:'img/product-4.png',
+  {src:'img/product-3.png', small: 'img/product1.jpg',
+  text:'185-STAY 1100/02 SlimГитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980
+  ₽'},
+  {src:'img/product-4.png', small: 'img/product2.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
 
-  {src:'img/product-2.png',
+  {src:'img/product-2.png', small: 'img/product1.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-  { src:'img/product-10.jpg',
+  { src:'img/product-10.jpg', small: 'img/product2.jpg',
   text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
-  {src:'img/product-11.jpg',
+  {src:'img/product-11.jpg', small: 'img/product1.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
 
-  {src:'img/product-13.jpg',
+  {src:'img/product-13.jpg', small: 'img/product2.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-  {src:'img/product-14.jpg',
+  {src:'img/product-14.jpg', small: 'img/product1.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-  {src:'img/product-11.jpg',
+  {src:'img/product-11.jpg', small: 'img/product2.jpg',
   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'}
   ] %}
 
@@ -54,12 +56,15 @@
         </div>
         <div class="p-card__visual">
           <div class="p-card__cover">
-            <img src="{{ cardItem.src }}" alt="{{ cardItem.alt }}" class="p-card__img">
+            <picture>
+              <source srcset="{{ cardItem.small }}" media="(max-width: 410px)">
+              <img src="{{ cardItem.src }}" alt="{{ alt }}" class="p-card__img">
+            </picture>
           </div>
         </div>
         <div class="p-card__description">
           <a href="#" class="p-card__link">
-            <strong>{{ cardItem.text }}</strong>
+            {{ cardItem.text }}
           </a>
         </div>
         <div class="p-card__price p-price">
@@ -115,11 +120,11 @@
         </li>
       </ul>
     </div>
-    <div class="sort__button-products">
-      <a href="#" class="link-product" role="button">75 товаров<br><span class="span-product">Показать</span></a>
-    </div>
     <div class="sort__button-up">
       <a href="#" class="link-up"></a>
     </div>
+  </div>
+  <div class="guitar-cards__button-products">
+    <a href="#" class="link-product" role="button">75 товаров<br><span class="span-product">Показать</span></a>
   </div>
 </div>

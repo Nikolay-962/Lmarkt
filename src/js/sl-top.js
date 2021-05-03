@@ -105,10 +105,10 @@ $(document).ready(function () {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,
     variableWidth: true,
     initialSlide: 1,
     draggable: false,
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1000,
@@ -118,6 +118,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
+          mobileFirst: true,
         }
       }
     ]

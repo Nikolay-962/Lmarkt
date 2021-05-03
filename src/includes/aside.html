@@ -2,7 +2,123 @@
   <h3 class="aside__title">Параметры</h3>
   <div class="aside__wrap">
     <form action="/" class="aside-form">
-
+      <div class="aside-form__wrap">
+        <div class="aside-form__top a-top">
+          <label for="stock" class="a-top__label">
+            <input type="checkbox" class="a-top__input" id="stock">
+            <span class="a-top__span"></span>
+            <strong>Есть в наличии</strong>
+          </label>
+        </div>
+        <div class="aside-form__categories categories">
+          {% set categoriesList = [
+          {label: 'accustic', id: 'accustic', name: 'Аккустические гитары'},
+          {label: 'bas', id: 'bas', name: 'Бас-гитары'},
+          {label: 'classics', id: 'classics', name: 'Классические'},
+          {label: 'classGuitar', id: 'classGuitar', name: 'Классические гитары'},
+          {label: 'ollGuitar', id: 'ollGuitar', name: 'Электроакустические гитары'},
+          {label: 'electroGuitar', id: 'electroGuitar', name: 'Электрогитары'},
+          ]%}
+          <ul class="categories__list">
+            <h4 class="categories__title">Категории</h4>
+            <button class="categories__btn"></button>
+            {% for categoriesItem in categoriesList %}
+            <li class="categories__item"></li>
+            <label for="{{ categoriesItem.label }}" class="categories__label active">
+              <input type="checkbox" class="categories__input" id="{{ categoriesItem.id }}">
+              <span class="categories__span"></span>
+              <strong>{{ categoriesItem.name }}</strong>
+            </label>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="aside-form__color a-colors">
+          <h4 class="a-colors__title">Цвет</h4>
+          <button class="a-colors__btn"></button>
+          {% set aColorsList = [
+          {class: 'a-colors__span--1', label: 'one', id: 'one'},
+          {class: 'a-colors__span--2', label: 'two', id: 'two'},
+          {class: 'a-colors__span--3', label: 'three', id: 'three'},
+          {class: 'a-colors__span--4', label: 'four', id: 'four'},
+          {class: 'a-colors__span--5', label: 'five', id: 'five'},
+          {class: 'a-colors__span--6', label: 'six', id: 'six'},
+          {class: 'a-colors__span--7', label: 'seven', id: 'seven'},
+          {class: 'a-colors__span--8', label: 'eight', id: 'eight'},
+          {class: 'a-colors__span--9', label: 'nine', id: 'nine'},
+          {class: 'a-colors__span--10', label: 'then', id: 'then'},
+          {class: 'a-colors__span--11', label: 'eleven', id: 'eleven'},
+          {class: 'a-colors__span--12', label: 'twelve', id: 'twelve'},
+          ] %}
+          <div class="a-colors__wrap">
+            {% for aColorsItem in aColorsList %}
+            <div class="a-colors__item">
+              <label for="{{ aColorsItem.label }}" class="a-colors__label">
+                <input type="checkbox" class="a-colors__input" id="{{ aColorsItem.id }}">
+                <span class="a-colors__span {{ aColorsItem.class }}"></span>
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+          <button class="a-colors__button">Сбросить цвета</button>
+        </div>
+        <div class="aside-form__brands a-brands">
+          <h4 class="a-brands__title">Бренд</h4>
+          <button class="a-brands__btn"></button>
+          <div class="a-brands__wrap">
+            <input type="search" class="a-brands__input" placeholder="Я ищу...">
+            {% set aBrandList = [
+            {href: './showing.html', name: 'CASIO'},
+            {href: '#', name: 'YAMAHA'},
+            {href: '#', name: 'Ibanez'},
+            {href: '#', name: 'YAMAHA'},
+            {href: '#', name: 'KORG'},
+            {href: '#', name: 'SHURE'},
+            {href: './showing.html', name: 'CASIO'},
+            {href: '#', name: 'YAMAHA'}
+            ]%}
+            <ul class="a-brands__list">
+              {% for aBrandItem in aBrandList %}
+              <li class="a-brands__item">
+                <a href="{{ aBrandItem.href }}" class="a-brands__link">{{ aBrandItem.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="aside-form__example example">
+          <h4 class="example__title">Пример блока</h4>
+          <button class="example__btn"></button>
+          {% set exampleList = [
+          {label: 'acc', id: 'acc', name: 'Аккустические гитары'},
+          {label: 'basguitar', id: 'basguitar', name: 'Бас-гитары'},
+          {label: 'ass', id: 'ass', name: 'Классические'}
+          ]%}
+          <ul class="example__wrap">
+            {% for exampleItem in exampleList %}
+            <li class="example__item">
+              <label for="{{ exampleItem.label }}" class="example__label active">
+                <input type="radio" value="radiobutton" class="example__input" id="{{ exampleItem.id }}">
+                <span class="example__span"></span>
+                <strong>{{ exampleItem.name }}</strong>
+              </label>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="aside-form__hidden hidden">
+          <div class="hidden__wrap">
+            <h4 class="hidden__title">Пример скрытого блока</h4>
+            <button class="hidden__btn"></button>
+          </div>
+        </div>
+        <div class="aside-form__buttons a-buttons">
+          <div class="a-buttons__wrap">
+            <input type="submit" class="a-buttons__input a-buttons__input--top" value="Показать">
+            <input type="submit" class="a-buttons__input" value="Сбросить">
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </div>
