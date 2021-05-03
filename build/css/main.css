@@ -4358,14 +4358,6 @@ body
     transform: rotate(45deg);
 }
 
-.guitar-cards__button-products
-{
-    position: absolute;
-    z-index: 6;
-    top: 35%;
-    left: 29%;
-}
-
 .sort
 {
     font-size: 13px;
@@ -4446,16 +4438,19 @@ body
     grid-gap: 26px;
 }
 
-.sort__numbers
-{
-    grid-column: 1/4;
-}
-
 .sort__button-up
 {
     position: absolute;
     right: -58px;
-    bottom: 20px;
+    bottom: -10%;
+}
+
+.sort__button-products
+{
+    position: absolute;
+    z-index: 6;
+    top: 30%;
+    left: 26px;
 }
 
 .link-up
@@ -4551,6 +4546,11 @@ body
 .numbers__link
 {
     color: #a0148e;
+}
+
+.numbers__link:hover
+{
+    color: #000;
 }
 
 .numbers__link--active
@@ -5283,11 +5283,6 @@ body
         display: block;
     }
 
-    .guitar-cards__button-products
-    {
-        display: none;
-    }
-
     .sort
     {
         display: none;
@@ -5301,7 +5296,7 @@ body
         grid-gap: 10px;
     }
 
-    .sort__numbers
+    .link-product
     {
         display: none;
     }

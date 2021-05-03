@@ -53,15 +53,6 @@
       }
     }
   }
-  &__button-products {
-    position: absolute;
-    top: 35%;
-    left: 29%;
-    z-index: 6;
-    @include media-down(md) {    
-      display: none;
-    }
-  }
 }
 .sort {
   font-size: 13px;
@@ -129,16 +120,16 @@
       
     }
   }
-  &__numbers {
-    grid-column: 1/4;
-    @include media-down(md) {    
-      display: none;
-    }
-  }
   &__button-up {
     position: absolute;
-    bottom: 20px;
+    bottom: -10%;
     right: -58px;
+  }
+  &__button-products {
+    position: absolute;
+    top: 30%;
+    left: 26px;
+    z-index: 6;
   }
 }
 .link-up {
@@ -176,7 +167,9 @@
   box-shadow: 0px 5px 26px rgba(160, 20, 142, 0.17);
   padding: 10px 14px; 
   border-radius: 3px;
-  
+  @include media-down(md) {    
+    display: none;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -201,6 +194,9 @@
    }
    &__link {
     color: #A0148E;
+    &:hover {
+      color: #000;
+    }
     &--active {
       color: #000;
     }
