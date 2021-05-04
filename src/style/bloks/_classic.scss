@@ -444,6 +444,9 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 15px;
+    &:hover {
+      color: #A0148E;
+    } 
     @include media-down(md) {    
       font-weight: normal;
       font-size: 13px;
@@ -619,12 +622,12 @@
       line-height: 22px;
     }
   }
-}
-.anons { 
-  @include flex($j-fs, $a-center);
-  @include media-down(md) {    
-    display: block;
-  }  
+  &__anons {
+    @include flex($j-fs, $a-center);
+    @include media-down(md) {    
+      display: block;
+    }
+  }
 }
 .classic-guitar {
   &__wrap {

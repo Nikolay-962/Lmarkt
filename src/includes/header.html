@@ -55,7 +55,7 @@
             {% set navList = [
             {title: 'Пункты выдачи и постаматы'},
             {title: 'О маркетплейсе'},
-            {title: 'Где мойзаказ?'},
+            {title: 'Где мой заказ?'},
             {title: 'Контакты'}
             ]%}
             <ul class="nav__list">
@@ -220,7 +220,7 @@
               {href: '#', text: 'Акустические гитары'},
               {href: '#', text: 'Акустические бас-гитары', isNext: true},
               {href: '#', text: 'Электрогитары'},
-              {href: '#', text: 'Бас-гитары', isNext: true},
+              {href: '#', text: 'Бас-гитары', isNext: true, class: 'set'},
               {href: '#', text: 'Укулеле', isNext: true},
               {href: '#', text: 'Народные инструменты', isNext: true},
               {href: '#', text: 'Наборы и комплекты'},
@@ -234,7 +234,7 @@
                 <strong class="icon icon--prev">Вернуться в Каталог</strong>
               </li>
               <li class="catalog__sub-item">
-                <a href="./classic.html" class="catalog__sub-link icon icon--next" id="class">
+                <a href="./classic.html" class="catalog__sub-link icon icon--next">
                   Класические гитары
                 </a>
                 <ul class="catalog__sub-sub-list">
@@ -262,7 +262,7 @@
                 </ul>
               </li>
               {% for catalogSubItem in catalogSubList %}
-              <li class="catalog__sub-item">
+              <li class="catalog__sub-item {% if catalogSubItem.class %} set {% endif %}">
                 <a href="{{ catalogSubItem.href }}"
                   class="catalog__sub-link {% if catalogSubItem.isNext %} icon icon--next {% endif %}">
                   {{ catalogSubItem.text }}

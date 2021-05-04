@@ -15,7 +15,6 @@
     margin-right: 16px;
     position: relative;
     &--slesh {
-      &::before,
       &::after {
         position: absolute;
         content: "";
@@ -28,13 +27,10 @@
           display: none;
         }
       }
-      &::before {
-        left: -8px;
-      }
       &::after {
         right: -8px;
       }
-    }   
+    }
   }
   &__link {
     font-size: 13px;

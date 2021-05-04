@@ -2670,7 +2670,6 @@ body
     margin-right: 16px;
 }
 
-.anons__item--slesh::before,
 .anons__item--slesh::after
 {
     position: absolute;
@@ -2683,11 +2682,6 @@ body
     transform: rotate(20deg);
 
     background-color: rgba(46, 0, 40, .3);
-}
-
-.anons__item--slesh::before
-{
-    left: -8px;
 }
 
 .anons__item--slesh::after
@@ -4024,6 +4018,11 @@ body
     cursor: pointer;
 }
 
+.example__label:hover
+{
+    color: #a0148e;
+}
+
 .example__span
 {
     position: absolute;
@@ -4261,7 +4260,7 @@ body
     color: #2d0027;
 }
 
-.anons
+.main-head__anons
 {
     display: flex;
 
@@ -5133,7 +5132,6 @@ body
         display: block;
     }
 
-    .anons__item--slesh::before,
     .anons__item--slesh::after
     {
         display: none;
@@ -5321,7 +5319,7 @@ body
         line-height: 45px;
     }
 
-    .anons
+    .main-head__anons
     {
         display: block;
     }
