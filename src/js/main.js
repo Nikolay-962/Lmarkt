@@ -30,7 +30,7 @@ const catalogNav = document.querySelector('.catalog__nav')
 sitiBtn.addEventListener('click', () => {
   let openSiti = document.querySelector('.region__sities');
   openSiti.classList.toggle('active');
-  blockFix.classList.toggle('fix');
+  //blockFix.classList.toggle('fix');
   darkBackground.classList.toggle('active');
   arrowTop.classList.toggle('region__button--open');
 
@@ -138,9 +138,12 @@ for (let footerNav of footerNavs) {
   })
 }
 
-// Увеличивает гитару
 
-
-
-
+// Делает гитару больше
+const guitarSmall = document.getElementById('small');
+guitarSmall.addEventListener('click', () => {
+  const guitarBig = document.querySelector('.primary__img-big');
+  guitarBig.classList.toggle('small');
+  darkBackground.classList.toggle('active');
+});
 

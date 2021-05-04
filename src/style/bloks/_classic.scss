@@ -1,13 +1,33 @@
+
+// Aside
 .aside {
-  position: relative;
-  @include media-down(md) {    
-    display: none;
-    }
+  @include media-down(md) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 6; 
+  }
   &__title {
     margin: 0;
+    @include media-down(md) {    
+      display: none;
+    } 
   }
   &__wrap {
     margin-top: 26px;
+    background-color: #fff;
+    @include media-down(md) {    
+      padding-top: 50px;
+      padding-right: 30px;
+    } 
+  }
+}
+.aside-open {
+  @include media-down(md) {
+    position: absolute;
+    top: -44px;
+    left: -28px;
+    z-index: 6;
   }
 }
 .aside-form {
@@ -15,10 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    @include media-down(md) {    
-      display: none;
-    }  
+    align-items: flex-start; 
   }
   &__top {
     border-bottom: 2px solid #FAEDF8;
@@ -34,6 +51,12 @@
     padding-left: 40px;
     position: relative;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    @include media-down(md) {    
+      font-weight: normal;
+      font-size: 13px;
+    } 
     &:hover {
       color: #A0148E;
     }   
@@ -75,8 +98,6 @@
     }
   }
 }
-
-
 .a-top__input:checked + .a-top__span::before,
 .a-top__input:checked + .a-top__span::after {
   display: block;
@@ -84,7 +105,6 @@
 .a-top__input:checked + .aside-form__span {
   border: 3px solid #EEC0E7;
 }
-
 .categories {
   border-bottom: 2px solid #FAEDF8;
   width: 100%;
@@ -104,6 +124,12 @@
     padding-left: 40px;
     position: relative;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    @include media-down(md) {    
+      font-weight: normal;
+      font-size: 13px;
+    } 
     &:hover {
       color: #A0148E;
     }   
@@ -197,7 +223,6 @@
     }
   }
 }
-
 .categories__input:checked + .categories__span::before,
 .categories__input:checked + .categories__span::after {
   display: block;
@@ -205,7 +230,6 @@
 .categories__input:checked + .categories__span {
   border: 3px solid #EEC0E7;
 }
-
 .a-colors {
   padding-left: 30px;
   &__wrap {
@@ -279,7 +303,7 @@
     height: 22px;
     display: block;
     margin-left: auto;
-    right: -48px;
+    right: 0px;
     top: -41px;
     border: none;
     background-color: #fff;
@@ -325,7 +349,6 @@
 .a-colors__input:checked + .a-colors__span {
   border: 3px solid rgba(160, 20, 142, 0.5); 
 }
-
 .a-brands {
   border-bottom: 2px solid #FAEDF8;
   width: 100%;
@@ -403,7 +426,6 @@
     }
   }
 }
-
 .example {
   position: relative;
   border-bottom: 2px solid #FAEDF8;
@@ -419,7 +441,13 @@
   &__label {
     position: relative;
     padding-left: 40px;
-    cursor: pointer;  
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    @include media-down(md) {    
+      font-weight: normal;
+      font-size: 13px;
+    }   
   }
   &__span {
     position: absolute;
@@ -493,11 +521,13 @@
 .example__input:checked + .example__span::before {
   display: block;
 }
-
 .hidden {
   border-bottom: 2px solid #FAEDF8;
   width: 100%;
   padding-left: 30px;
+    @include media-down(md) {    
+      display: none;
+    } 
   &__btn {
     position: relative;
     width: 36px;
@@ -547,7 +577,6 @@
     }
   }
 }
-
 .a-buttons {
   width: 100%; 
   &__wrap {
@@ -568,8 +597,267 @@
     &--top {
       color: #fff;
       background-color:  #A0148E;
-      margin-bottom: 10px;
-      
+      margin-bottom: 10px;     
     }
   }
 }
+//Finish aside
+// Classic main  разметка
+.main-head {
+  &__title {
+    font-size: 50px;
+    line-height: 65px;
+    color: #2D0027;
+    font-weight: bold;
+    margin: 24px 0 20px;
+    @include media-down(md) {    
+      font-size: 30px;
+      line-height: 45px;
+    }
+    @include media-down(sm) {    
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+.anons { 
+  @include flex($j-fs, $a-center);
+  @include media-down(md) {    
+    display: block;
+  }  
+}
+.classic-guitar {
+  &__wrap {
+    position: relative;
+    display: grid;
+    column-gap: 26px;
+    grid-template-areas:
+    'aside main' 
+    ;
+    @include media-down(md) {    
+      grid-template-areas:
+    'main' 
+    ;
+    }
+  }
+  &__aside {
+    grid-area: 'aside'; 
+  }
+  &__main {
+    grid-area: 'main';
+  }
+}
+// Конец разметки
+.guitar-cards {
+  &__btn {
+    position: relative;    
+    width: 106px;
+    height: 22px;
+    display: block;
+    left: 0;
+    top: 0;
+    border: none;
+    background-color: #fff;
+    display: none;
+    color: rgba(160, 20, 142, .6);
+    text-align: left;
+    cursor: pointer;
+    z-index: 8;
+    @include media-down(md) {    
+      display: block;
+      }
+    &:hover {
+      &::before,
+      &::after  {
+        background-color: #A0148E;
+      }
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 2px;
+      background-color: rgba(160, 20, 142, .6);
+      cursor: pointer;
+    }
+    &::before {
+      top: 9px;
+      right: 8px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      top: 15px;
+      right: 9px;
+      transform: rotate(-45deg);
+    }
+    &--open {
+      width: 152px;
+      padding-left: 20px;
+      background-color: $col-white;
+      &::before {       
+        transform: rotate(-45deg);
+        left: 0;
+        top: 8px;
+      }
+      &::after {
+        transform: rotate(45deg);
+        left: 0;
+        top: 13px;
+      }
+    }
+  }
+}
+.sort {
+  font-size: 13px;
+  line-height: 18px;
+  color: #2D0027;
+  @include media-down(md) {    
+    display: none;
+  }
+  &__span {
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: #2D0027;
+    right: -1.5px;
+    top: 2px;
+  }
+  &__btn {
+    cursor: pointer;
+    margin-left: 16px;
+    border: none;
+    color: #A0148E;
+    background-color: #fff;
+    &--pop {
+      position: relative;
+      color: #2D0027;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 1px;
+        background-color: #000;
+        z-index: 6;
+      }
+      &::after {
+        transform: rotate(45deg);
+        right: -5px;
+        top: 3px;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        right: -2px;
+        top: 3px;
+      }
+    }
+    
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 26px;    
+    position: relative;
+    grid-gap: 26px;
+    @include media-down(md) {  
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 14px; 
+      grid-gap: 10px;
+    }
+    @include media-down(sm) {    
+      margin-top: 14px; 
+    }
+  }
+  &__item {
+    @include media-down(md) {   
+      
+    }
+  }
+  &__button-up {
+    position: absolute;
+    bottom: -10%;
+    right: -58px;
+  }
+  &__button-products {
+    position: absolute;
+    top: 33%;
+    left: 20px;
+    z-index: 6;
+  }
+}
+.link-up {
+  display: block;
+  width: 53px;
+  height: 53px;
+  background: #2D0027;
+  opacity: 0.15;
+  border-radius: 50%;
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+  }
+  &::before {
+    transform: rotate(45deg);
+    top: 23px;
+    left: 25px;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    top: 23px;
+    left: 14px;
+  }
+}
+.link-product {
+  position: relative;
+  display: block;
+  color: #2D0027;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 26px rgba(160, 20, 142, 0.17);
+  padding: 10px 14px; 
+  border-radius: 3px;
+  @include media-down(md) {    
+    display: none;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #fff transparent transparent;  
+    left: -19px;
+    top: 22px;
+  
+  }
+}
+.span-product {
+  color: #A0148E;
+}
+ .numbers {
+   &__list {
+    @include flex($j-sb, $a-center);
+    margin: 56px 0;
+   }
+   &__link {
+    color: #A0148E;
+    &:hover {
+      color: #000;
+    }
+    &--active {
+      color: #000;
+    }
+   }
+   &__span {
+    color: #2D0027;
+    opacity: 0.3;
+    font-size: 22px;
+   }
+ }

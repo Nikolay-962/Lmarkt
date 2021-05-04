@@ -1,16 +1,11 @@
+/*
 "use strict"
 const darkBackground = document.querySelector('.substrate');
 const openCatalog = document.querySelector('.header__catalog');
 const sitiBtn = document.getElementById('town');
 const blockFix = document.querySelector('.page');
 const arrowTop = document.querySelector('.region__button');
-const guitarSmall = document.getElementById('small');
 
-guitarSmall.addEventListener('click', () => {
-  const guitarBig = document.querySelector('.primary__img-big');
-  guitarBig.classList.toggle('small');
-  darkBackground.classList.toggle('active');
-});
 
 const catalogBtn = document.getElementById('catalog');
 catalogBtn.addEventListener('click', () => {
@@ -56,4 +51,4 @@ showTextButton.addEventListener('click', () => {
     showTextButton.textContent = 'Подробнее';
     sliderMargin.classList.add('up');
   }
-})
+})*/
