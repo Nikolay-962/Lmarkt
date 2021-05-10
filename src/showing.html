@@ -157,13 +157,15 @@
                 <div class="guitar__description description">
                   <ul class="description__list">
                     <li class="description__item">
-                      <a href="#" class="description__link description__link--active">Описание</a>
+                      <button class="description__btn" id="deck">Описание</button>
                     </li>
                     <li class="description__item">
-                      <a href="#" class="description__link">Отзывы <div class="description__span ">5</div></a>
+                      <button class="description__btn" id="review">Отзывы</button>
+                      <div class="description__span ">5</div>
                     </li>
                     <li class="description__item">
-                      <a href="#" class="description__link">Комментарии <div class="description__span">3</div></a>
+                      <button class="description__btn" id="comment">Комментарии</button>
+                      <div class="description__span">3</div>
                     </li>
                   </ul>
                   <div class="description__text-desc">
@@ -183,25 +185,17 @@
                     выразительным звучанием
                     и высокой надежностью.
                     <div class="rectangle rectangle--cassio">
-                      <button class="bottom-arrow bottom-arrow--cassio">Подробнее
+                      <button class="bottom-arrow bottom-arrow--cassio">
+                        <span class="cassio-label">Подробнее</span>
                       </button>
                     </div>
                   </div>
                   <div class="description__reviews reviews">
                     <div class="reviews__item">
                       <template id="reviews">
-                        <div class="reviews__title"><strong>Максим П.</strong></div>
-                        <div class="reviews__time">02.10.2019 в 15:45</div>
-                        <p class="reviews__text">
-                          Давно хотел приобрести радар-детектор и вот наконец собрался!Долго выбирал,сравнивал,наконец
-                          выбрал Street
-                          Storm STR 9000BT! Заказывал
-                          из Москвы.Менеджер по телефону отлично проконсультировал!Назначили дату доставки в Петербург.
-                          Привезли
-                          вовремя
-                          все в целости-сохранности!
-                          Очень и очень доволен
-                        </p>
+                        <div class="reviews__title"><strong></strong></div>
+                        <div class="reviews__time"></div>
+                        <p class="reviews__text"></p>
                       </template>
                     </div>
                     <div class="reviews__item">
@@ -384,8 +378,7 @@
   <script src="js/slick.min.js"></script>
   <script src="js/sl-top.js"></script>
   <script src="js/profile.js"></script>
-  <!--<script src="js/showing.js"></script>-->
+  <script src="js/showing.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/slid-showing.js"></script>
 </body>
 {% endblock %}

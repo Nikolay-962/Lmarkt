@@ -92,8 +92,8 @@
                         <div class="aside-form__brands a-brands">
                           <h4 class="a-brands__title">Бренд</h4>
                           <button class="a-brands__btn"></button>
+                          <input type="search" class="a-brands__input" placeholder="Я ищу...">
                           <div class="a-brands__wrap">
-                            <input type="search" class="a-brands__input" placeholder="Я ищу...">
                             {% set aBrandList = [
                             {href: './showing.html', name: 'CASIO'},
                             {href: '#', name: 'YAMAHA'},
@@ -102,7 +102,12 @@
                             {href: '#', name: 'KORG'},
                             {href: '#', name: 'SHURE'},
                             {href: './showing.html', name: 'CASIO'},
-                            {href: '#', name: 'YAMAHA'}
+                            {href: '#', name: 'YAMAHA'},
+                            {href: './showing.html', name: 'CASIO'},
+                            {href: '#', name: 'YAMAHA'},
+                            {href: '#', name: 'Ibanez'},
+                            {href: '#', name: 'YAMAHA'},
+                            {href: '#', name: 'KORG'}
                             ]%}
                             <ul class="a-brands__list">
                               {% for aBrandItem in aBrandList %}
@@ -151,7 +156,7 @@
                   </div>
                 </div>
               </aside>
-              <div class="classic-guitar__main">
+              <main class="classic-guitar__main">
                 <div class="guitar-cards">
                   <div class="sort">
                     <span class="sort__text">Сортировать по:</span>
@@ -183,7 +188,6 @@
                   text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
                   {src:'img/product-11.jpg', small: 'img/product1.jpg',
                   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
-
                   {src:'img/product-13.jpg', small: 'img/product2.jpg',
                   text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
                   {src:'img/product-14.jpg', small: 'img/product1.jpg',
@@ -282,7 +286,7 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </main>
             </div>
           </div>
         </div>

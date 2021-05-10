@@ -5,7 +5,7 @@ a {
   text-decoration: none;  
 }
 img {
-  display: block;
+  //display: block;
 }
 ul {
   list-style: none;
@@ -45,16 +45,12 @@ body {
   }
 }
 // Стили хедера в блоке header
-// slider-top
-.slider-top {
+// slider-
+
+.slider-top { 
   position: relative;
   min-height: 0;
   overflow: hidden;
-  &__list {
-    position: relative;
-    display: flex;
-    justify-content: space-between;    
-  }
 }
 .slick-list {
   overflow: hidden;
@@ -77,8 +73,7 @@ body {
   font-size: 0;
   @include media-down(sm) {    
     width: 30px;
-    height: 28px;
-     
+    height: 28px;    
   }
   &::before {
     content: "";
@@ -136,8 +131,10 @@ body {
   width: 14px;
   height: 14px;
 }
+
 .visual {
   position: relative;
+  width: 100%;
   &__s-content {
     position: absolute;
     top: 14%;
@@ -148,9 +145,14 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);     
     }
-  }
+  } 
   &__cover {
     position: relative;
+    padding-top: 34%;
+    @media (max-width: 410px) { 
+      position: relative;
+      padding-top: 0;
+      }  
     &::before {
       content: "";
       position: absolute;
@@ -169,11 +171,15 @@ body {
       }      
     }
   }
-  &__picture {
+  &__img {
     position: absolute;
     top: 0;
     width: 100%;
+    @media (max-width: 410px) { 
+    position: relative;
+    }  
   }
+
 }
 .s-content {
   @include media-down(sm) {    
@@ -619,15 +625,14 @@ body {
   right: 0;
   bottom: 0px;
   top: 58%;
-  background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #FFF9FE 69.27%);
-  &--cassio {
-    display: none;
-    @include media-down(md) {    
-      display: block;
-      top: 0;
-    }
-    
-  }
+  background: linear-gradient(180deg, rgba(255, 249, 254, 0) 0%, #FFF9FE 69.27%);  
+}
+.cassio-label {
+  display: none;
+  @include media-down(md) {    
+    display: block;
+    top: 0;
+  }  
 }
 .bottom-arrow { 
   position: relative;  
@@ -641,7 +646,7 @@ body {
   height: 22px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -60px;
+  bottom: -27px;
   cursor: pointer;
   &::before,
   &::after {
@@ -675,8 +680,7 @@ body {
       transform: rotate(45deg);
     }
   }
-  &--cassio {    
-    display: none;
+  &--cassio {        
     @include media-down(md) {    
       display: block;
       font-size: 12px;

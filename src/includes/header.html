@@ -3,7 +3,7 @@
     <div class="header__h-top h-top">
       <div class="h-top__wrap">
         <div class="h-top__region region">
-          <button type="button" class="region__button" id="town">
+          <button type="button" class="region-button">
             Москва
           </button>
           <div class="region__sities siti">
@@ -53,15 +53,15 @@
         <div class="h-top__navigation">
           <nav class="nav">
             {% set navList = [
-            {title: 'Пункты выдачи и постаматы'},
-            {title: 'О маркетплейсе'},
-            {title: 'Где мой заказ?'},
-            {title: 'Контакты'}
+            {title: 'Пункты выдачи и постаматы', href: '#'},
+            {title: 'О маркетплейсе', href: '#'},
+            {title: 'Где мой заказ?', href: './privat.html'},
+            {title: 'Контакты', href: '#'}
             ]%}
             <ul class="nav__list">
               {% for navItem in navList %}
               <li class="nav__item">
-                <a href="#" class="nav__link">{{navItem.title}}</a>
+                <a href="{{ navItem.href }}" class="nav__link">{{navItem.title}}</a>
               </li>
               {% endfor %}
             </ul>
@@ -96,6 +96,9 @@
           <a href="./index.html" class="logo__link">
             <img src="img/logo.svg" alt="logo" class="logo__img">
           </a>
+          <button type="button" class="region-button region-button--main">
+            Москва
+          </button>
         </div>
         <div class="h-main__catalog-btn catalog-btn">
           <button type="button" class="catalog-btn__button" id="catalog">
@@ -197,7 +200,7 @@
         </div>
         <ul class="catalog__list">
           {% set catalogList = [
-          {href: '#', text: 'Клавишные инструменты', isNext: true},
+          {href: '#', text: 'Клавишные инструменты', isNext: true, id: 'guitar'},
           {href: '#', text: 'Ударные инструменты', isNext: true},
           {href: '#', text: 'Микрофоны и радиосистемы', isOpen: true},
           {href: '#', text: 'DJ оборудование'},
@@ -220,7 +223,7 @@
               {href: '#', text: 'Акустические гитары'},
               {href: '#', text: 'Акустические бас-гитары', isNext: true},
               {href: '#', text: 'Электрогитары'},
-              {href: '#', text: 'Бас-гитары', isNext: true, class: 'set'},
+              {href: '#', text: 'Бас-гитары', isNext: true, id: 'set'},
               {href: '#', text: 'Укулеле', isNext: true},
               {href: '#', text: 'Народные инструменты', isNext: true},
               {href: '#', text: 'Наборы и комплекты'},
@@ -262,7 +265,7 @@
                 </ul>
               </li>
               {% for catalogSubItem in catalogSubList %}
-              <li class="catalog__sub-item {% if catalogSubItem.class %} set {% endif %}">
+              <li class="catalog__sub-item" id="{{ catalogSubItem.id }}">
                 <a href="{{ catalogSubItem.href }}"
                   class="catalog__sub-link {% if catalogSubItem.isNext %} icon icon--next {% endif %}">
                   {{ catalogSubItem.text }}
@@ -273,7 +276,7 @@
           </li>
           {% for catalogItem in catalogList %}
           <li class="catalog__item">
-            <a href="{{informItem.href }}"
+            <a href="{{catalogItem.href }}"
               class="catalog__link catalog__link--mobile {% if catalogItem.isNext %} icon icon--next {% endif %}">
               {{ catalogItem.text }}
             </a>

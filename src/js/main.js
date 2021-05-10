@@ -1,13 +1,13 @@
 "use strict"
 
-const sitiBtn = document.getElementById('town');
+const sitiBtns = document.querySelectorAll('.region-button');
 const catalogBtn = document.getElementById('catalog');
 const tounLink = document.querySelectorAll('.scrol__item');
 const openList = document.getElementById('guitar');
-const openListTwo = document.querySelector('.set');
+const openListTwo = document.getElementById('set');
 const catalogWidth = document.getElementById('width');
 const darkBackground = document.querySelector('.substrate');
-const arrowTop = document.querySelector('.region__button');
+const arrowTop = document.querySelector('.region-button');
 const catalogList = document.querySelector('.catalog__list');
 const catalogSubList = document.querySelector('.catalog__sub-list');
 const catalogSubListTwo = document.querySelector('.catalog__sub-sub-list');
@@ -27,15 +27,15 @@ const catalogNav = document.querySelector('.catalog__nav')
 //Фиксирование страници при выпадающих окнах
 
 //Список городов
-sitiBtn.addEventListener('click', () => {
-  let openSiti = document.querySelector('.region__sities');
-  openSiti.classList.toggle('active');
-  //blockFix.classList.toggle('fix');
-  darkBackground.classList.toggle('active');
-  arrowTop.classList.toggle('region__button--open');
-
-});
-
+for (let sitiBtn of sitiBtns) {
+  sitiBtn.addEventListener('click', () => {
+    let openSiti = document.querySelector('.region__sities');
+    openSiti.classList.toggle('active');
+    //blockFix.classList.toggle('fix');
+    darkBackground.classList.toggle('active');
+    arrowTop.classList.toggle('region-button--open');
+  });
+}
 //Меняет текст в кнопке и не только.
 for (let i = 0; i < tounLink.length; i++) {
   tounLink[i].addEventListener('click', () => {
@@ -67,6 +67,7 @@ openList.addEventListener('click', () => {
   servisMobile.style.display = "none";
   navMobile.style.display = "none";
 });
+
 openListTwo.addEventListener('click', () => {
   if (catalogSubListTwo.classList.contains('open')) {
     catalogSubListTwo.classList.remove('open');
@@ -76,7 +77,6 @@ openListTwo.addEventListener('click', () => {
     catalogWidth.style.width = "100%"
   }
 });
-
 
 subBack.addEventListener('click', () => {
   if (catalogWidth.classList.contains('catalog__wrap--mobile')) {
@@ -104,6 +104,7 @@ subSubBack.addEventListener('click', () => {
 //Инструменты по видам
 showList.addEventListener('click', () => {
   const rectangle = document.querySelector('.rectangle');
+  console.log(rectangle);
   if (rectangle.classList.contains('active')) {
     rectangle.classList.remove('active');
     showList.classList.add('bottom-arrow--open');
@@ -113,7 +114,9 @@ showList.addEventListener('click', () => {
     showList.classList.remove('bottom-arrow--open');
     rectangle.style.top = '58%';
   }
-});
+})
+
+
 
 openMenu.addEventListener('click', () => {
   openMenu.classList.toggle('servis__item--open');
@@ -138,7 +141,6 @@ for (let footerNav of footerNavs) {
   })
 }
 
-
 // Делает гитару больше
 const guitarSmall = document.getElementById('small');
 guitarSmall.addEventListener('click', () => {
@@ -146,4 +148,8 @@ guitarSmall.addEventListener('click', () => {
   guitarBig.classList.toggle('small');
   darkBackground.classList.toggle('active');
 });
+
+
+
+
 

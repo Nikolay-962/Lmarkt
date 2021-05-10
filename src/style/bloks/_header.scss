@@ -9,7 +9,7 @@
   background-color: rgba(64, 7, 57, .2);  
   display: none;
   position: fixed;
-  z-index: 6;
+  z-index: 8;
   top: 0;
   right: 0;
   bottom: 0;
@@ -40,9 +40,7 @@
   &__region {
     margin-right: auto;
     @include media-down(md) {    
-      position: absolute;
-      right: 0;
-      top: 54px;
+      display: none;
     }
   }
   &__soci {
@@ -51,54 +49,68 @@
     }
   }
 }
-.region {   
-  &__button { 
-    position: relative;  
-    background-color: transparent; 
-    color: $col-pink;
-    font-weight: bold;
-    padding: 10px 50px 10px 0px;
-    border: none;
-    font-size: 15px;
-    outline: none;
-    z-index: 6;
+.region-button {
+  position: relative;  
+  background-color: #fff; 
+  color: $col-pink;
+  font-weight: bold;
+  padding: 10px 50px 10px 0px;
+  border: none;
+  font-size: 15px;          
+  z-index: 8;
+  cursor: pointer;
+  @include media-down(md) {    
+    padding: 10px 30px 10px 20px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: $col-pink;
     cursor: pointer;
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 2px;
-      background-color: $col-pink;
-      cursor: pointer;
-    }
-    &::before {
-      top: 18px;
-      right: 36px;
-      transform: rotate(45deg);
-    }
-    &::after {
-      top: 18px;
-      right: 31px;
-      transform: rotate(-45deg);
-    }
-    &--open {
-      padding: 10px 30px 10px 20px;
-      background-color: $col-white;
-      &::before {       
-        transform: rotate(-45deg);
-        right: 14px;
-      }
-      &::after {
-        transform: rotate(45deg);
-        right: 9px;
-      }
+  }
+  &::before {
+    top: 18px;
+    right: 36px;
+    transform: rotate(45deg);
+    @include media-down(md) {    
+      right: 18px;
     }
   }
+  &::after {
+    top: 18px;
+    right: 31px;
+    transform: rotate(-45deg);
+    @include media-down(md) {    
+      right: 13px;
+    }
+  }
+  &--open {
+    padding: 10px 30px 10px 20px;
+    background-color: $col-white;
+    &::before {       
+      transform: rotate(-45deg);
+      right: 14px;
+    }
+    &::after {
+      transform: rotate(45deg);
+      right: 9px;
+    }
+  }
+  &--main {
+    display: none;
+    @include media-down(md) {    
+      display: block;
+    }
+  }
+}
+.region {   
   &__sities {
     display: none;
     position: absolute;
-    z-index: 6;
+    z-index: 9;
     background-color: $col-white;  
     top: 36px;
     right: 0;
@@ -106,12 +118,15 @@
     transition: .3s ease;
     @include media-down(md) {    
       left: -340%;
+      z-index: 17;
     }
     @include media-down(sm) {    
       left: -171%;
+      z-index: 17;
     }
     @include media-down(sx) {    
       left: -60%;
+      z-index: 17;
     }
   }
 }
@@ -213,7 +228,8 @@
   &__logo {  
     @include media-down(md) {    
       margin: 12px 0;
-      order: 2;      
+      order: 2; 
+      @include flex($j-sb, $a-center);    
     }
   }
   &__catalog-btn {    
@@ -285,7 +301,7 @@
       font-size: 14px;
       background-color: $col-white;
       color: $col-pink;
-      z-index: 8;
+      z-index: 9;
       &::before {
         position: absolute;
         content: "";
@@ -791,7 +807,14 @@
   }
 }
 .scrol { 
+  position: relative;
+  overflow-y: scroll;
+  height: 400px;
   &__list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    //border: 1px solid #ccc;
     columns: auto 4; 
     @include media-down(md) {    
       columns: auto 2;
@@ -1083,4 +1106,7 @@
 
 .seconds {
   margin-left: 10px;
+}
+dialog::backdrop {
+  background-color: #ccc;
 }
