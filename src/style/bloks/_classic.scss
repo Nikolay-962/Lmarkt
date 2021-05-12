@@ -628,7 +628,10 @@
     font-size: 50px;
     color: #2D0027;
     font-weight: bold;
-    margin: 24px 0 38px ;
+    margin: 24px 0 38px;
+    text-transform: uppercase;
+    line-height: 80px;
+    letter-spacing: .03em;
     @include media-down(md) {    
       font-size: 30px;
       line-height: 45px;
@@ -636,6 +639,9 @@
     @include media-down(sm) {    
       font-size: 18px;
       line-height: 22px;
+    }
+    &--basket {
+      margin-bottom: 10px;
     }
   }
   &__anons {

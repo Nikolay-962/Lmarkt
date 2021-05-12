@@ -388,9 +388,10 @@
               </li>
               <li class="servis__item servis__item--favorites">
                 <a href="#" class="servis__link">
-                  <svg class="s-icon servis__icon servis__icon--favorites">
-                    <use href="#favorites"></use>
-                  </svg>
+                  <img src="img/favorites-icon.svg" alt="" class="s-icon servis__icon servis__icon--favorites">
+                  <!--<svg class=" s-icon servis__icon servis__icon--favorites">
+                  <use href="#favorites"></use>
+                  </svg>-->
                   Избранное
                 </a>
               </li>
@@ -431,11 +432,12 @@
                 </ul>
               </li>
               <li class="servis__item servis__item--basket">
-                <a href="#" class="servis__link" id="purchase">
+                <a href="../basket.html" class="servis__link" id="purchase">
                   <div class="servis__amount" id="amount">2</div>
-                  <svg class="s-icon servis__icon">
+                  <img src="img/basket-icon.svg" alt="" class="servis__icon">
+                  <!--<svg class="s-icon servis__icon">
                     <use href="#basket"></use>
-                  </svg>
+                  </svg>-->
                   Корзина
                 </a>
               </li>
@@ -772,7 +774,7 @@
           <div class="servis">
             <ul class="servis__list servis__list--catalog">
               <li class="servis__item servis__item--catalog">
-                <a href="#" class="servis__link servis__link--catalog">
+                <a href="../basket.html" class="servis__link servis__link--catalog">
                   Корзина (<span>2</span>)
                   <div class="servis__amount servis__amount--catalog">2</div>
                   <svg class="s-icon servis__icon servis__icon--catalog">
@@ -799,9 +801,10 @@
               <li class="servis__item servis__item--catalog">
                 <a href="#" class="servis__link servis__link--catalog">
                   Избранное
-                  <svg class="s-icon servis__icon servis__icon--catalog">
+                  <img src="img/favorites-icon.svg" alt="" class="s-icon servis__icon servis__icon--catalog">
+                  <!--<svg class="s-icon servis__icon servis__icon--catalog">
                     <use href="#favorites"></use>
-                  </svg>
+                  </svg>-->
                 </a>
               </li>
             </ul>
@@ -2217,7 +2220,7 @@
       <linearGradient id="paint0_linear" x1="9.86763" y1="0" x2="9.86763" y2="17.9032" gradientUnits="userSpaceOnUse">
         <stop stop-color="#F200A3" />
         <stop offset="0.494792" stop-color="#FF0000" />
-        <stop stop-color="#FFC100" />
+        <stop offset="1" stop-color="#FFC100" />
       </linearGradient>
       <linearGradient id="paint1_linear" x1="9.86763" y1="0" x2="9.86763" y2="17.9032" gradientUnits="userSpaceOnUse">
         <stop stop-color="#F200A3" />
@@ -2250,8 +2253,7 @@
   </symbol>
   <symbol viewBox="0 0 24 19" id="favorites">
     <path class="servis-icon"
-      d="M20.223 1.76393C19.071 0.632264 17.5459 0.0137449 15.9182 0.0137449C14.2904 0.0137449 12.7606 0.636846 11.6086 1.76851L11.007 2.35954L10.396 1.75934C9.24401 0.627683 7.70957 0 6.08184 0C4.45878 0 2.929 0.623101 1.78166 1.75018C0.629662 2.88184 -0.00463843 4.38462 2.55386e-05 5.9836C2.55386e-05 7.58259 0.638989 9.08078 1.79099 10.2124L10.5499 18.8167C10.6712 18.9359 10.8344 19 10.993 19C11.1516 19 11.3148 18.9404 11.4361 18.8213L20.2137 10.2308C21.3657 9.09911 22 7.59633 22 5.99735C22.0046 4.39836 21.375 2.89559 20.223 1.76393ZM19.3275 9.35568L10.993 17.511L2.67714 9.34193C1.76301 8.44394 1.2593 7.25271 1.2593 5.9836C1.2593 4.71449 1.75834 3.52327 2.67248 2.62985C3.58195 1.73644 4.79459 1.24162 6.08184 1.24162C7.37376 1.24162 8.59106 1.73644 9.5052 2.63443L10.5593 3.66988C10.8064 3.91271 11.2029 3.91271 11.4501 3.66988L12.4948 2.6436C13.4089 1.7456 14.6262 1.25078 15.9135 1.25078C17.2007 1.25078 18.4134 1.7456 19.3275 2.63902C20.2417 3.53701 20.7407 4.72824 20.7407 5.99735C20.7454 7.26646 20.2417 8.45768 19.3275 9.35568Z"
-      fill="#A0148E" />
+      d="M20.223 1.76393C19.071 0.632264 17.5459 0.0137449 15.9182 0.0137449C14.2904 0.0137449 12.7606 0.636846 11.6086 1.76851L11.007 2.35954L10.396 1.75934C9.24401 0.627683 7.70957 0 6.08184 0C4.45878 0 2.929 0.623101 1.78166 1.75018C0.629662 2.88184 -0.00463843 4.38462 2.55386e-05 5.9836C2.55386e-05 7.58259 0.638989 9.08078 1.79099 10.2124L10.5499 18.8167C10.6712 18.9359 10.8344 19 10.993 19C11.1516 19 11.3148 18.9404 11.4361 18.8213L20.2137 10.2308C21.3657 9.09911 22 7.59633 22 5.99735C22.0046 4.39836 21.375 2.89559 20.223 1.76393ZM19.3275 9.35568L10.993 17.511L2.67714 9.34193C1.76301 8.44394 1.2593 7.25271 1.2593 5.9836C1.2593 4.71449 1.75834 3.52327 2.67248 2.62985C3.58195 1.73644 4.79459 1.24162 6.08184 1.24162C7.37376 1.24162 8.59106 1.73644 9.5052 2.63443L10.5593 3.66988C10.8064 3.91271 11.2029 3.91271 11.4501 3.66988L12.4948 2.6436C13.4089 1.7456 14.6262 1.25078 15.9135 1.25078C17.2007 1.25078 18.4134 1.7456 19.3275 2.63902C20.2417 3.53701 20.7407 4.72824 20.7407 5.99735C20.7454 7.26646 20.2417 8.45768 19.3275 9.35568Z" />
   </symbol>
   <symbol viewBox="0 0 24 16" id="comparison">
     <path class="servis-icon" d="M20.5 15H6.5M4.5 15H0.5M20.5 8H6.5M4.5 8H0.5M20.5 1H6.5M4.5 1H0.5"
@@ -2286,12 +2288,6 @@
   </symbol>
   <symbol viewBox="0 0 18 19" id="crost">
     <path class="servis-icon" d="M1 1.5L9 9.5M17 17.5L9 9.5M9 9.5L17 1.5L1 17.5" stroke="#A0148E" stroke-width="1.5" />
-  </symbol>
-  <symbol>
-
-  </symbol>
-  <symbol>
-
   </symbol>
 </svg>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

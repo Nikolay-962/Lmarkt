@@ -1,0 +1,248 @@
+{% extends "templates/default.html" %}
+{% set title = "basket" %}
+{% block content %}
+
+<body id="basket">
+  <div class="page">
+    <div class="substrate"></div>
+    <div class="container">
+      {% include "includes/header.html" %}
+      <main class="main">
+        <div class="main__wrap">
+          <div class="main-head">
+            <ul class="main-head__anons anons">
+              <li class="anons__item anons__item--slesh">
+                <a href="./index.html" class="anons__link">Главная</a>
+              </li>
+              <li class="anons__item">
+                <a href="№" class="anons__link">Пункты выдачи и постоматы в Москве</a>
+              </li>
+            </ul>
+            <h2 class="main-head__title main-head__title--basket">
+              Корзина
+            </h2>
+          </div>
+          <div class="main__basket-body b-body">
+            <form action="/" class="b-body__wrap">
+              <div class="b-body__main">
+                <section class="delivery">
+                  <div class="delivery__wrap">
+                    <div class="d-title delivery__title">Доставка на 22 марта</div>
+                    <div class="del-cards">
+                      <div class="del-cards__wrap d-top">
+                        <div class="d-top__wrap">
+                          <div class="d-top__item row">
+                            <div class="row__wrap">
+                              <div class="row__o-card o-card">
+                                <div class="o-card__wrap">
+                                  <div class="o-cards__vasual">
+                                    <img src="img/mini-1.jpg" alt="Гитара" class="ocards__img">
+                                  </div>
+                                  <div class="o-cards__content o-content">
+                                    <div class="o-content__text">
+                                      185-STAY 1100/02 Slim Стойка-колонна для клавишных
+                                      <span class="o-content__span">
+                                    </div>
+                                    <div class="o-content__price">
+                                      <span class="o-content__summ">(ООО «Композитор»)</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row__counter counter">
+                                <span class="counter__span">-</span>
+                                <span class="counter__num">2</span>
+                                <span class="counter__span">+</span>
+                              </div>
+                              <div class="row__summa summa">
+                                15 980 ₽
+                                <span class="summa__old">18 980 ₽</span>
+                              </div>
+                              <button class="row__button"></button>
+                            </div>
+                          </div>
+                          <div class="d-top__item row">
+                            <div class="row__wrap">
+                              <div class="row__o-card o-card">
+                                <div class="o-card__wrap">
+                                  <div class="o-cards__vasual">
+                                    <img src="img/mini-1.jpg" alt="Гитара" class="ocards__img">
+                                  </div>
+                                  <div class="o-cards__content o-content">
+                                    <div class="o-content__text">
+                                      011C Гитара классическая 4/4, Doff
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row__counter counter">
+                                <span class="counter__span">-</span>
+                                <span class="counter__num">1</span>
+                                <span class="counter__span">+</span>
+                              </div>
+                              <div class="row__summa summa">
+                                15 980 ₽
+                                <span class="summa__old">18 980 ₽</span>
+                              </div>
+                              <button class="row__button"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio radio">
+                              <div class="radio__wrap">
+                                <div class="radio__item">
+                                  Доставка:
+                                </div>
+                                <div class="radio__item">
+                                  <label for="courier" class="radio__label">
+                                    Курьер
+                                    <input type="radio" name="delivery" class="radio__input" id="courier">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item">
+                                  <label for="pickup" class="radio__label">
+                                    Самовывоз
+                                    <input type="radio" name="delivery" class="radio__input" id="pickup">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item">
+                                  <label for="postamat" class="radio__label">
+                                    Постомат
+                                    <input type="radio" name="delivery" class="radio__input" id="postamat">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--summ">
+                                  <span class="radio__summ">390 ₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio courier">
+                              <div class="courier__wrap">
+                                <div class="courier__item">
+                                  <span class="courier__span">Выбор ТК:</span>
+                                </div>
+                                <div class="courier__item k-firm">
+                                  <div class="k-firm__wrap">
+                                    <img src="img/k-firm-1.jpg" alt="Пек" class="k-firm__img">
+                                    <div class="k-firm__item">2-5 дней</div>
+                                    <div class="k-firm__item">390 ₽</div>
+                                  </div>
+                                </div>
+                                <div class="courier__item k-firm">
+                                  <div class="k-firm__wrap">
+                                    <img src="img/k-firm-2.jpg" alt="Пек" class="k-firm__img">
+                                    <div class="k-firm__item">3 дня</div>
+                                    <div class="k-firm__item">190 ₽</div>
+                                  </div>
+                                </div>
+                                <div class="courier__item k-firm">
+                                  <div class="k-firm__wrap">
+                                    <img src="img/k-firm3-1.jpg" alt="Пек" class="k-firm__img">
+                                    <img src="img/k-firm3-2.jpg" alt="Пек" class="k-firm__img">
+                                    <div class="k-firm__item">1-5 дней</div>
+                                    <div class="k-firm__item">590 ₽</div>
+                                  </div>
+                                </div>
+                                <div class="courier__item k-firm">
+                                  <div class="k-firm__wrap">
+                                    <img src="img/k-firm-4.jpg" alt="Пек" class="k-firm__img">
+                                    <div class="k-firm__item">4-10 дней</div>
+                                    <div class="k-firm__item">100 ₽</div>
+                                  </div>
+                                </div>
+                                <div class="courier__item k-firm">
+                                  <div class="k-firm__wrap">
+                                    <img src="img/k-firm-5.jpg" alt="Пек" class="k-firm__img">
+                                    <div class="k-firm__item">1-2 дней</div>
+                                    <div class="k-firm__item">520 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio adres">
+                              <div class="adres__wrap">
+                                <div class="adres__item">
+                                  <span class="adres__span">Куда доставлять</span>
+                                </div>
+                                <div class="adres__item">
+                                  <input type="text" class="adres__input"
+                                    placeholder="Санкт-Петербург, ул. Генерала Белобородова, д. 70">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--bottom">
+                            <div class="row__bottom-btn">
+                              <button class="bottom-btn">Добавить новый адрес</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <side class="b-body__aside total">
+                <div class="total__wrap">
+                  <div class="total__item">
+                    <div class="d-title total__title">Итого</div>
+                  </div>
+                  <div class="total__item total__item--summ">380 890 ₽</div>
+                  <div class="total__item total__item--status">Всего:</div>
+                  <div class="total__item total__item--value">8 товаров (3 позиции)</div>
+                  <div class="total__item total__item--status">Достфвка</div>
+                  <div class="total__item total__item--value">840 ₽</div>
+                  <div class="total__item total__item--status">Скидка:</div>
+                  <div class="total__item total__item--value">788 ₽ (30%)</div>
+                  <div class="total__item total__item--payment radio">
+                    <label for="now" class="radio__label">
+                      Оплата сейчас
+                      <input type="radio" name="payment" class="radio__input" id="now">
+                      <span class="radio__span"></span>
+                    </label>
+                    <div class="radio__description">
+                      Карта, QIWI, Яндекс.деньги, МТС, Теле2, Apple pay
+                    </div>
+                  </div>
+                  <div class="total__item total__item--payment radio">
+                    <label for="later" class="radio__label">
+                      Оплата при получении
+                      <input type="radio" name="payment" class="radio__input" id="later">
+                      <span class="radio__span"></span>
+                    </label>
+                  </div>
+                  <div class="total__item total__item--payment a-buttons">
+                    <input type="submit" class="total-btn a-buttons__input a-buttons__input--top"
+                      value="Перейти к оплате">
+                  </div>
+                </div>
+              </side>
+            </form>
+          </div>
+        </div>
+      </main>
+      {% include "includes/footer.html" %}
+    </div>
+  </div>
+  {% include "includes/sprite.html" %}
+  <script src="js/privat.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+{% endblock %}
