@@ -5148,7 +5148,7 @@ dialog::backdrop
 {
     padding-bottom: 10px;
 
-    border-bottom: 2px solid rgba(245, 222, 243, .5);
+    border-bottom: 2px solid rgba(245, 222, 243, .4);
 }
 
 .row__wrap
