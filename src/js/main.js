@@ -104,7 +104,6 @@ subSubBack.addEventListener('click', () => {
 //Инструменты по видам
 showList.addEventListener('click', () => {
   const rectangle = document.querySelector('.rectangle');
-  console.log(rectangle);
   if (rectangle.classList.contains('active')) {
     rectangle.classList.remove('active');
     showList.classList.add('bottom-arrow--open');
@@ -114,7 +113,7 @@ showList.addEventListener('click', () => {
     showList.classList.remove('bottom-arrow--open');
     rectangle.style.top = '58%';
   }
-})
+});
 
 
 

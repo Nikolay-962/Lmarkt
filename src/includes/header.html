@@ -202,7 +202,7 @@
         </div>
         <ul class="catalog__list">
           {% set catalogList = [
-          {href: '#', text: 'Клавишные инструменты', isNext: true, id: 'guitar'},
+          {href: '#', text: 'Клавишные инструменты', isNext: true},
           {href: '#', text: 'Ударные инструменты', isNext: true},
           {href: '#', text: 'Микрофоны и радиосистемы', isOpen: true},
           {href: '#', text: 'DJ оборудование'},
@@ -225,7 +225,7 @@
               {href: '#', text: 'Акустические гитары'},
               {href: '#', text: 'Акустические бас-гитары', isNext: true},
               {href: '#', text: 'Электрогитары'},
-              {href: '#', text: 'Бас-гитары', isNext: true, id: 'set'},
+              {href: '#', text: 'Бас-гитары', isNext: true},
               {href: '#', text: 'Укулеле', isNext: true},
               {href: '#', text: 'Народные инструменты', isNext: true},
               {href: '#', text: 'Наборы и комплекты'},
@@ -267,7 +267,7 @@
                 </ul>
               </li>
               {% for catalogSubItem in catalogSubList %}
-              <li class="catalog__sub-item" id="{{ catalogSubItem.id }}">
+              <li class="catalog__sub-item">
                 <a href="{{ catalogSubItem.href }}"
                   class="catalog__sub-link {% if catalogSubItem.isNext %} icon icon--next {% endif %}">
                   {{ catalogSubItem.text }}

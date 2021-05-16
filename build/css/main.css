@@ -5837,6 +5837,26 @@ body
         display: block;
     }
 
+    .bottom-arrow::before
+    {
+        transform: rotate(-45deg);
+    }
+
+    .bottom-arrow::after
+    {
+        transform: rotate(45deg);
+    }
+
+    .bottom-arrow--open::before
+    {
+        transform: rotate(45deg);
+    }
+
+    .bottom-arrow--open::after
+    {
+        transform: rotate(-45deg);
+    }
+
     .bottom-arrow--cassio
     {
         font-size: 12px;

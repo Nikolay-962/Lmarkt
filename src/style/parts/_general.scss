@@ -661,11 +661,17 @@ body {
     top: 10px;
     right: 14px;
     transform: rotate(45deg);
+    @include media-down(md) { 
+      transform: rotate(-45deg);
+    }
   }
   &::after {
     top: 10px;
     right: 2px;
     transform: rotate(-45deg);
+    @include media-down(md) { 
+      transform: rotate(45deg);
+    }
   }
   &--open {
     bottom: 8px;
@@ -673,11 +679,17 @@ body {
       top: 8px;
       right: 14px;
       transform: rotate(-45deg);
+      @include media-down(md) { 
+        transform: rotate(45deg);
+      }
     }
     &::after {
       top: 8px;
       right: 2px;
       transform: rotate(45deg);
+      @include media-down(md) { 
+        transform: rotate(-45deg);
+      }
     }
   }
   &--cassio {        
