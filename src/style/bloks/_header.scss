@@ -671,10 +671,10 @@
       left: 0px;
       margin: 0;
       width: 20px;
-      &--profile {
-        width: 20px;
-        height: 20px;
-      }
+    }
+    &--profile {
+      width: 20px;
+      height: 20px;
     }
     &:hover {
       stroke: $col-hov;     
