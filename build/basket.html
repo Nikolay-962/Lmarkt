@@ -1002,7 +1002,7 @@
                           <div class="row__wrap row__wrap--radio">
                             <div class="row__radio radio">
                               <div class="radio__wrap">
-                                <div class="radio__item">
+                                <div class="c-span radio__item radio__item--title">
                                   Доставка:
                                 </div>
                                 <div class="radio__item">
@@ -1019,7 +1019,7 @@
                                     <span class="radio__span"></span>
                                   </label>
                                 </div>
-                                <div class="radio__item">
+                                <div class="radio__item radio__item--postamat">
                                   <label for="postamat" class="radio__label">
                                     Постомат
                                     <input type="radio" name="delivery" class="radio__input" id="postamat">
@@ -1037,8 +1037,8 @@
                           <div class="row__wrap row__wrap--radio">
                             <div class="row__radio courier">
                               <div class="courier__wrap">
-                                <div class="courier__item">
-                                  <span class="courier__span">Выбор ТК:</span>
+                                <div class="courier__item courier__item--title">
+                                  <span class="c-span courier__span">Выбор ТК:</span>
                                 </div>
                                 <div class="courier__item k-firm">
                                   <div class="k-firm__wrap">
@@ -1084,12 +1084,16 @@
                           <div class="row__wrap row__wrap--radio">
                             <div class="row__radio adres">
                               <div class="adres__wrap">
-                                <div class="adres__item">
-                                  <span class="adres__span">Куда доставлять</span>
+                                <div class="adres__item adres__item--title">
+                                  <span class="c-span adres__span">Куда доставлять</span>
                                 </div>
-                                <div class="adres__item">
-                                  <input type="text" class="adres__input"
-                                    placeholder="Санкт-Петербург, ул. Генерала Белобородова, д. 70">
+                                <div class="adres__item adres__item--field">
+                                  <select name="adres" id="adres" class="adres__input select">
+                                    <option value="Санкт-Петербург, ул. Генерала Белобородова, д. 70">
+                                      Санкт-Петербург, ул. Генерала Белобородова, д. 70</option>
+                                    <option value="Москва, ул. Ленина, д.50, кв.5 ">
+                                      Москва, ул. Ленина, д.50, кв.5 </option>
+                                  </select>
                                 </div>
                               </div>
                             </div>
@@ -1106,6 +1110,325 @@
                     </div>
                   </div>
                 </section>
+                <section class="delivery delivery--two">
+                  <div class="delivery__wrap">
+                    <div class="d-title delivery__title">
+                      Товары от «Музофон»
+                      <span class="d-title-span">(ООО «Музофон»)</span>
+                    </div>
+                    <div class="del-cards">
+                      <div class="del-cards__wrap d-top">
+                        <div class="d-top__wrap">
+                          <div class="d-top__item row">
+                            <div class="row__wrap">
+                              <div class="row__o-card o-card">
+                                <div class="o-card__wrap">
+                                  <div class="o-cards__vasual">
+                                    <img src="img/mini-1.jpg" alt="Гитара" class="ocards__img">
+                                  </div>
+                                  <div class="o-cards__content o-content">
+                                    <div class="o-content__text">
+                                      185-STAY 1100/02 Slim Стойка-колонна для клавишных
+                                      <span class="o-content__span">
+                                    </div>
+                                    <div class="o-content__price">
+                                      <span class="o-content__summ">(ООО «Композитор»)</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row__counter counter">
+                                <span class="counter__span">-</span>
+                                <span class="counter__num">2</span>
+                                <span class="counter__span">+</span>
+                              </div>
+                              <div class="row__summa summa">
+                                15 980 ₽
+                                <span class="summa__old">18 980 ₽</span>
+                              </div>
+                              <button class="row__button"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio radio">
+                              <div class="radio__wrap">
+                                <div class="c-span radio__item radio__item--title">
+                                  Доставка:
+                                </div>
+                                <div class="radio__item">
+                                  <label for="courier" class="radio__label">
+                                    Курьер
+                                    <input type="radio" name="delivery" class="radio__input" id="courier">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item">
+                                  <label for="pickup" class="radio__label">
+                                    Самовывоз
+                                    <input type="radio" name="delivery" class="radio__input" id="pickup">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--postamat">
+                                  <label for="postamat" class="radio__label">
+                                    Постомат
+                                    <input type="radio" name="delivery" class="radio__input" id="postamat">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--summ">
+                                  <span class="radio__summ">0 ₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio adres">
+                              <div class="adres__wrap adres__wrap--shop">
+                                <div class="adres__item">
+                                  <span class="c-span adres__span">Адрес магазина</span>
+                                </div>
+                                <div class="adres__item adres__item--shop">
+                                  Москва, ул. Ленина, д.120
+                                  <span class="working-hours">(ПН-ПТ с 09:00-22:00, СБ-ВС с 10:00-21:00)</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="delivery delivery--three">
+                  <div class="delivery__wrap">
+                    <div class="d-title delivery__title">
+                      Товары от «ЦойЖив»
+                      <span class="d-title-span">(ООО «Виктор Робертович»)</span>
+                    </div>
+                    <div class="del-cards">
+                      <div class="del-cards__wrap d-top">
+                        <div class="d-top__wrap">
+                          <div class="d-top__item row">
+                            <div class="row__wrap">
+                              <div class="row__o-card o-card">
+                                <div class="o-card__wrap">
+                                  <div class="o-cards__vasual">
+                                    <img src="img/mini-1.jpg" alt="Гитара" class="ocards__img">
+                                  </div>
+                                  <div class="o-cards__content o-content">
+                                    <div class="o-content__text">
+                                      185-STAY 1100/02 Slim Стойка-колонна для клавишных
+                                      <span class="o-content__span">
+                                    </div>
+                                    <div class="o-content__price">
+                                      <span class="o-content__summ">(ООО «Композитор»)</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row__counter counter">
+                                <span class="counter__span">-</span>
+                                <span class="counter__num">2</span>
+                                <span class="counter__span">+</span>
+                              </div>
+                              <div class="row__summa summa">
+                                15 980 ₽
+                                <span class="summa__old">18 980 ₽</span>
+                              </div>
+                              <button class="row__button"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio radio">
+                              <div class="radio__wrap">
+                                <div class="c-span radio__item radio__item--title">
+                                  Доставка:
+                                </div>
+                                <div class="radio__item">
+                                  <label for="courier" class="radio__label">
+                                    Курьер
+                                    <input type="radio" name="delivery" class="radio__input" id="courier">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item">
+                                  <label for="pickup" class="radio__label">
+                                    Самовывоз
+                                    <input type="radio" name="delivery" class="radio__input" id="pickup">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--postamat">
+                                  <label for="postamat" class="radio__label">
+                                    Постомат
+                                    <input type="radio" name="delivery" class="radio__input" id="postamat">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--summ">
+                                  <span class="radio__summ">100 ₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio adres">
+                              <div class="adres__wrap adres__wrap--shop">
+                                <div class="adres__item">
+                                  <span class="c-span adres__span">Адрес пстомата</span>
+                                </div>
+                                <div class="adres__item adres__item--shop">
+                                  <select name="adres" id="adres" class="adres__input select">
+                                    <option value="Москва, ул. Генерала Белобородова, 50 (ТЦ «Горбушка»)">
+                                      Москва, ул. Генерала Белобородова, 50 (ТЦ «Горбушка»)</option>
+                                    <option value="Москва, ул. Ленина, д.50, кв.5 ">
+                                      Москва, ул. Ленина, д.50, ТЦ </option>
+                                  </select>
+                                  <div class="adres__description">
+                                    Доступ к постамату с 10:00 до 22:00
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="delivery delivery--four">
+                  <div class="delivery__wrap">
+                    <div class="d-title delivery__title">
+                      Товары от «ЦойЖив»
+                      <span class="d-title-span">(ООО «Виктор Робертович»)</span>
+                    </div>
+                    <div class="del-cards">
+                      <div class="del-cards__wrap d-top">
+                        <div class="d-top__wrap">
+                          <div class="d-top__item row">
+                            <div class="row__wrap">
+                              <div class="row__o-card o-card">
+                                <div class="o-card__wrap">
+                                  <div class="o-cards__vasual">
+                                    <img src="img/mini-1.jpg" alt="Гитара" class="ocards__img">
+                                  </div>
+                                  <div class="o-cards__content o-content">
+                                    <div class="o-content__text">
+                                      185-STAY 1100/02 Slim Стойка-колонна для клавишных
+                                      <span class="o-content__span">
+                                    </div>
+                                    <div class="o-content__price">
+                                      <span class="o-content__summ">(ООО «Композитор»)</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row__counter counter">
+                                <span class="counter__span">-</span>
+                                <span class="counter__num">2</span>
+                                <span class="counter__span">+</span>
+                              </div>
+                              <div class="row__summa summa">
+                                15 980 ₽
+                                <span class="summa__old">18 980 ₽</span>
+                              </div>
+                              <button class="row__button"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio radio">
+                              <div class="radio__wrap">
+                                <div class="c-span radio__item radio__item--title">
+                                  Доставка:
+                                </div>
+                                <div class="radio__item">
+                                  <label for="courier" class="radio__label">
+                                    Курьер
+                                    <input type="radio" name="delivery" class="radio__input" id="courier">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item">
+                                  <label for="pickup" class="radio__label">
+                                    Самовывоз
+                                    <input type="radio" name="delivery" class="radio__input" id="pickup">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--postamat">
+                                  <label for="postamat" class="radio__label">
+                                    Постомат
+                                    <input type="radio" name="delivery" class="radio__input" id="postamat">
+                                    <span class="radio__span"></span>
+                                  </label>
+                                </div>
+                                <div class="radio__item radio__item--summ">
+                                  <span class="radio__summ">100 ₽</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="del-cards__item row">
+                          <div class="row__wrap row__wrap--radio">
+                            <div class="row__radio adres">
+                              <div class="adres__wrap adres__wrap--shop">
+                                <div class="adres__item">
+                                  <span class="c-span adres__span">Адрес пстомата</span>
+                                </div>
+                                <div class="adres__item adres__item--shop">
+                                  <div class="adres__button">
+                                    <button class="bottom-btn">Выбрать постомат</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="my-data">
+                  <div class="my-data__wrap">
+                    <div class="my-data__fieldset my-data__fieldset--basket">
+                      <div class="my-data__legend">Ваши данные</div>
+                      <ul class="my-data__list" role="none">
+                        <li class="my-data__item">
+                          <label for="name" class="my-data__label">Ваше имя</label>
+                          <input type="text" class="my-data__input" id="name" placeholder="Максим">
+                        </li>
+                        <li class="my-data__item">
+                          <label for="surname" class="my-data__label">Фамилия</label>
+                          <input type="text" class="my-data__input" id="surname" placeholder="Иванов">
+                        </li>
+                        <li class="my-data__item">
+                          <label for="patronymic" class="my-data__label">Отчество</label>
+                          <input type="text" class="my-data__input" id="patronymic" placeholder="Константинович">
+                        </li>
+                        <li class="my-data__item">
+                          <label for="phone" class="my-data__label">Телефон</label>
+                          <input type="tel" class="my-data__input" id="phone" placeholder="+7 (977) 883-63-28">
+                        </li>
+                        <li class="my-data__item">
+                          <label for="email" class="my-data__label">E-mail</label>
+                          <input type="email" class="my-data__input" id="email" placeholder="info@maximivanov.ru">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
               </div>
               <side class="b-body__aside total">
                 <div class="total__wrap">
@@ -1115,7 +1438,7 @@
                   <div class="total__item total__item--summ">380 890 ₽</div>
                   <div class="total__item total__item--status">Всего:</div>
                   <div class="total__item total__item--value">8 товаров (3 позиции)</div>
-                  <div class="total__item total__item--status">Достфвка</div>
+                  <div class="total__item total__item--status">Доствка</div>
                   <div class="total__item total__item--value">840 ₽</div>
                   <div class="total__item total__item--status">Скидка:</div>
                   <div class="total__item total__item--value">788 ₽ (30%)</div>

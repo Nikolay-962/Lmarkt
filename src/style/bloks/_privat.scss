@@ -287,6 +287,9 @@
     @include media-down(md) {
      width: 100%;
     }
+    &--basket {
+      width: 100%;
+    }
   }
   &__legend {
     font-weight: bold;
@@ -305,6 +308,13 @@
   &__item {
     flex-basis: 31%;
     margin-left: 20px;
+    @include media-down(md) {
+     flex-basis: 46%;
+    }
+    @include media-down(sm) {
+      flex-basis: 96%;
+      padding-right: 20px;
+     }
   }
   &__input {
     padding: 10px 20px;
@@ -365,6 +375,7 @@
     border-radius: 3px;
     color: #A0148E;
     font-weight: bold;
+    background-color: #fff;
     &:hover {
       background-color: #FFEFFD;
     }

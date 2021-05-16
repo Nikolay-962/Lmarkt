@@ -331,7 +331,7 @@
     top: -11px;
     left: 0;  
     &--mobile {
-      top: -114px;
+      top: -117px;
       right: 0;
       display: block;
     } 
@@ -1106,7 +1106,4 @@
 
 .seconds {
   margin-left: 10px;
-}
-dialog::backdrop {
-  background-color: #ccc;
 }

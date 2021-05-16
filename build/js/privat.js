@@ -8,7 +8,7 @@ for (let structureBtn of structureBtns) {
   })
 }
 
-//переслючение на странице в Личном кабинете. "Купленные товары"
+//перелючение на странице в Личном кабинете. "Купленные товары"
 const boughtBtn = document.getElementById('buy');
 const showPurchased = document.querySelector('.purchased');
 boughtBtn.addEventListener('click', () => {

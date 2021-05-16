@@ -172,7 +172,7 @@
     height: 100%;
     width: 100%;
     @include media-down(md) { 
-     height: 300px;
+     height: 200px;
     }
   }
   
@@ -215,6 +215,9 @@
     height: 102px;
     @include media-down(md) {
       height: 168px; 
+    }
+    @include media-down(sm) {
+      height: 78px; 
     }
   }
   &__btn {
@@ -441,7 +444,12 @@
   &__img {
     object-fit: cover;
     width: 61px;
-    height: 81px;   
+    height: 81px;
+    
+    @include media-down(sm) {
+      width: 50px;
+      height: 61px; 
+    }   
   }
 }
 .description {
