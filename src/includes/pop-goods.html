@@ -1,18 +1,25 @@
 {% set cardList = [
 {src:'img/product1.png', small: 'img/product1.jpg',
 text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
+
 {src:'img/product-2.png', small: 'img/product2.jpg',
 text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽'},
+
 {src:'img/product3.png', small: 'img/product2.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+
 {src:'img/product4.png', small: 'img/product1.jpg',
 text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'},
+
 {src:'img/product1.png', small: 'img/product2.jpg',
 text:'Гитара<br> классическая 4/4, Doff', alt: 'гитара', prise:'15 980 ₽<br>', oldprise:'18 980 ₽'},
+
 {src:'img/product-2.png', small: 'img/product1.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+
 {src:'img/product3.png', small: 'img/product2.jpg',
 text:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...', alt: 'гитара', prise:'15 980 ₽'},
+
 { src:'img/product4.png', small: 'img/product1.jpg',
 text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное', alt: 'гитара', prise:'15 980 ₽'}
 ] %}
@@ -38,7 +45,7 @@ text:'438PIA0703 Stage Studio<br> Цифровое пианино, черное'
             <div class="p-card__visual">
               <div class="p-card__cover">
                 <picture>
-                  <source srcset="{{ cardItem.small }}" media="(max-width: 410px)">
+                  <source srcset="img/product2.jpg" media="(max-width: 410px)">
                   <img src="{{ cardItem.src }}" alt="{{ alt }}" class="p-card__img">
                 </picture>
               </div>
