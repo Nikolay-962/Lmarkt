@@ -121,7 +121,7 @@
             <ul class="servis__list">
               <li class="servis__item servis__item--menu">
                 <button type="button" class="servis__btn servis__btn--menu">
-                  <svg class="s-icon servis__icon">
+                  <svg class="s-icon servis__icon servis__icon--menu">
                     <use href="#menu"></use>
                   </svg>
                   Меню
@@ -216,13 +216,13 @@
             </a>
             <ul class="catalog__sub-list">
               {% set catalogSubList = [
-              {href: '#', text: 'Акустические гитары'},
-              {href: '#', text: 'Акустические бас-гитары', isNext: true},
+              {href: '#', text: 'Акустические гитары', isNext: true},
+              {href: '#', text: 'Акустические бас-гитары'},
               {href: '#', text: 'Электрогитары'},
               {href: '#', text: 'Бас-гитары', isNext: true},
               {href: '#', text: 'Укулеле', isNext: true},
-              {href: '#', text: 'Народные инструменты', isNext: true},
-              {href: '#', text: 'Наборы и комплекты'},
+              {href: '#', text: 'Народные инструменты'},
+              {href: '#', text: 'Наборы и комплекты', isNext: true},
               {href: '#', text: 'Гитарное усиление'},
               {href: '#', text: 'Процессоры и педали эффектов', isNext: true},
               {href: '#', text: 'Тюнеры и метрономы'},
@@ -259,6 +259,11 @@
                   </li>
                   {% endfor %}
                 </ul>
+              </li>
+              <li class="catalog__sub-item">
+                <a href="#" class="catalog__sub-link set icon icon--next">
+                  Наборы и комплекты
+                </a>
               </li>
               {% for catalogSubItem in catalogSubList %}
               <li class="catalog__sub-item">
@@ -327,7 +332,7 @@
           <div class="servis">
             <ul class="servis__list servis__list--catalog">
               <li class="servis__item servis__item--catalog">
-                <a href="../basket.html" class="servis__link servis__link--catalog">
+                <a href="./basket.html" class="servis__link servis__link--catalog">
                   Корзина (<span>2</span>)
                   <div class="servis__amount servis__amount--catalog">2</div>
                   <svg class="s-icon servis__icon servis__icon--catalog">
