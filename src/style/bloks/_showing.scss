@@ -180,7 +180,7 @@
     position: absolute;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    row-gap: 20px;    
+    row-gap: 12px;    
     @include media-down(md) { 
       @include flex($j-sb, $a-center);
       margin-bottom: 30px;     
@@ -212,7 +212,7 @@
   }
   &__img {
     object-fit: cover;
-    height: 102px;
+    height: 100%;
     @include media-down(md) {
       height: 168px; 
     }

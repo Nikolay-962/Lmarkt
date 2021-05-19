@@ -2853,7 +2853,7 @@ body
     display: grid;
 
     grid-template-rows: repeat(5, 1fr);
-    row-gap: 20px;
+    row-gap: 12px;
 }
 
 .preview__item
@@ -2894,7 +2894,7 @@ body
 
 .preview__img
 {
-    height: 102px;
+    height: 100%;
 
     -o-object-fit: cover;
        object-fit: cover;
