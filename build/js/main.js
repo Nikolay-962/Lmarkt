@@ -114,9 +114,7 @@ showList.addEventListener('click', () => {
     rectangle.style.top = '58%';
   }
 });
-
-
-
+// открывает меню в мобильном
 openMenu.addEventListener('click', () => {
   openMenu.classList.toggle('servis__item--open');
   servisIcon.classList.toggle('opacity');
@@ -139,11 +137,3 @@ for (let footerNav of footerNavs) {
     footerNav.nextElementSibling.classList.toggle('active');
   })
 }
-
-// Делает гитару больше
-const guitarSmall = document.getElementById('small');
-guitarSmall.addEventListener('click', () => {
-  const guitarBig = document.querySelector('.primary__img-big');
-  guitarBig.classList.toggle('small');
-  darkBackground.classList.toggle('active');
-});

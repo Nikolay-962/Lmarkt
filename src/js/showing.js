@@ -31,7 +31,7 @@ reviewBtn.addEventListener('click', () => {
     showDeckription.classList.remove('active');
     showComments.classList.remove('active');
   }
-})
+});
 commentBtn.addEventListener('click', () => {
   if (commentBtn.classList.contains('description__btn--active')) {
     commentBtn.classList.remove('description__btn--active');
@@ -43,5 +43,12 @@ commentBtn.addEventListener('click', () => {
     showDeckription.classList.remove('active');
     showReview.classList.remove('active');
   }
-})
+});
+// Делает гитару больше
+const guitarSmall = document.getElementById('small');
+guitarSmall.addEventListener('click', () => {
+  const guitarBig = document.querySelector('.primary__img-big');
+  guitarBig.classList.toggle('small');
+  darkBackground.classList.toggle('active');
+});
 
